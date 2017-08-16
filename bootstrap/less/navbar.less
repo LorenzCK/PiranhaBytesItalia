@@ -67,7 +67,7 @@
 
     &.collapse {
       display: block !important;
-      height: auto !important;
+      //height: auto !important;
       padding-bottom: 0; // Override default setting
       overflow: visible !important;
     }
@@ -423,8 +423,10 @@
       &,
       &:hover,
       &:focus {
-        color: @navbar-default-link-active-color;
-        background-color: @navbar-default-link-active-bg;
+        @media (min-width: @screen-sm-min) {
+          color: @navbar-default-link-active-color;
+          background-color: @navbar-default-link-active-bg;
+        }
       }
     }
     > .disabled > a {
@@ -460,8 +462,10 @@
       &,
       &:hover,
       &:focus {
-        background-color: @navbar-default-link-active-bg;
-        color: @navbar-default-link-active-color;
+        @media (min-width: @screen-sm-min) {
+          background-color: @navbar-default-link-active-bg;
+          color: @navbar-default-link-active-color;
+        }
       }
     }
 

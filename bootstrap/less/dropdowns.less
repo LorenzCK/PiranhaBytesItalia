@@ -58,7 +58,9 @@
 
   // Dividers (basically an hr) within the dropdown
   .divider {
-    .nav-divider(@dropdown-divider-bg);
+    @media (min-width: @screen-sm-min) {
+      .nav-divider(@dropdown-divider-bg);
+    }
   }
 
   // Links within the dropdown menu

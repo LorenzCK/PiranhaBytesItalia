@@ -1,0 +1,106 @@
+/* Custom Piranha Bytes Italia styles */
+
+body {
+    min-height: 1024px; // adapt to background
+    padding-top: 70px; // fit top navbar
+}
+
+/* Navbars */
+.navbar {
+    font-family: "aqua_grotesqueregular";
+}
+.navbar-top {
+    min-height: 50px;
+    height: 50px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    font-size: 1.1em;
+
+    display: none;
+    @media (min-width: @screen-sm-min) {
+        display: block;
+    }
+
+    > .container {
+        text-align: right;
+
+        > ul {
+            float: none;
+            display: inline-block;
+        }
+    }
+
+    ul, li {
+        height: 50px;
+        line-height: 50px;
+    }
+    li {
+        margin-left: 1em;
+    }
+}
+nav.navbar-default {
+    font-size: 1.8em;
+    color: #000000;
+
+    > .container  {
+        > div.collapse {
+            @media (min-width: @screen-sm-min) {
+                height: @navbar-height;
+            }
+            
+            text-align: right;
+            @media (min-width: @screen-md-min) {
+                text-align: center;
+            }
+        }
+    }
+
+    ul.navbar-nav {
+        @media (min-width: @screen-sm-min) {
+            display: inline-block;
+            float: none;
+        }
+        
+        > li {
+            > a {
+                text-transform: uppercase;
+
+                @media (min-width: @screen-sm-min) {
+                    padding-left: 1em;
+                    padding-right: 1em;
+                }
+            }
+        }
+
+        li {
+            text-align: right;
+            @media (min-width: @screen-sm-min) {
+                text-align: inherit;
+            }
+
+            a {
+                color: #000000;
+                text-decoration: none;
+            }
+            a:hover {
+                color: @gray-dark;
+                text-decoration: none;
+            }
+        }
+
+        .dropdown-menu {
+            font-size: ceil((@font-size-base * 1.1)); // ~15.4px
+        }
+    }
+}
+.navbar-header {
+    position: absolute;
+    width: 200px;
+    top: -70px;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
