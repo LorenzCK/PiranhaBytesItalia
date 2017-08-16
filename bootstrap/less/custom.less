@@ -1,8 +1,8 @@
 /* Custom Piranha Bytes Italia styles */
 
 body {
-    min-height: 1024px; // adapt to background
-    padding-top: 70px; // fit top navbar
+    margin: 0;
+    padding: 0;
 }
 
 /* Navbars */
@@ -14,9 +14,11 @@ body {
     height: 50px;
     padding-bottom: 0;
     margin-bottom: 0;
+    background-color: rgba(0, 23, 22, 0.7);
 
     font-size: 1.1em;
 
+    // Show on small
     display: none;
     @media (min-width: @screen-sm-min) {
         display: block;
@@ -37,6 +39,28 @@ body {
     }
     li {
         margin-left: 1em;
+
+        img {
+            width: auto;
+            height: 20px;
+        }
+
+        a {
+            padding: 0;
+            line-height: inherit;
+            background-color: transparent;
+            color: #ffffff;
+        }
+        a:hover {
+            background-color: transparent;
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        a:focus {
+            background-color: transparent;
+            color: @brand-primary;
+            text-decoration: none;
+        }
     }
 }
 nav.navbar-default {
@@ -102,5 +126,79 @@ nav.navbar-default {
     img {
         width: 100%;
         height: auto;
+    }
+}
+
+.brand-overlay {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    z-index: 250;
+
+    // Show on small
+    display: none;
+    @media (min-width: @screen-sm-min) {
+        display: block;
+    }
+
+    width: 250px;
+    max-width: 25%;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    position: relative;
+    //min-height: 1024px; // adapt to background
+    padding-top: 200px; // fit top .navbar
+    padding-bottom: 5em;
+    overflow: hidden;
+
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% auto;
+
+    .bottom-background {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &.gothic1 {
+        background-image: url('backgrounds/main-1.0.jpg');
+    }
+}
+
+#page-content {
+    position: relative;
+    z-index: 500;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    background-image: url('content-back-0.5.png');
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+
+    h1 {
+        text-align: center;
+    }
+}
+
+footer {
+    display: block;
+    padding-top: 1em;
+    padding-bottom: 3em;
+
+    background-color: @brand-primary;
+    color: #000000;
+    font-size: 0.9em;
+
+    .col-sm-6:first-child {
+        border-right: solid 1px black;
     }
 }
