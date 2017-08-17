@@ -15,7 +15,7 @@
           <div class="col-sm-6 access-links">
             <ul>
               <li><a href="#">Homepage</a></li>
-              <li><a href="#">Gothic Saga</a></li>++
+              <li><a href="#">Gothic Saga</a></li>
               <li><a href="#">Elex</a></li>
               <li><a href="#">Risen Saga</a></li>
               <li><a href="#">Staff e contatti</a></li>

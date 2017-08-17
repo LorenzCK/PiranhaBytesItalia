@@ -37,3 +37,8 @@ add_filter('show_admin_bar', '__return_false');
 function pbi_get_section_class() {
     return 'gothic1';
 }
+
+/* Gets a page's permalink from its slug */
+function pbi_page_permalink_from_slug($slug) {
+    return get_permalink(get_page_by_path($slug));
+}

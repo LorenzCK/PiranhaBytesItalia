@@ -18,13 +18,13 @@
       <nav class="navbar navbar-top">
         <div class="container">
           <ul class="nav navbar-nav">
-            <li><a href="#">Homepage</a></li>
-            <li><a href="#">Staff</a></li>
-            <li><a href="#">Forum</a></li>
-            <li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-facebook-white.png" alt="Facebook icon" /></a></li>
-            <li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-youtube-white.png" alt="Facebook icon" /></a></li>
-            <li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-googleplus-white.png" alt="Facebook icon" /></a></li>
-            <li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-rss-white.png" alt="Facebook icon" /></a></li>
+            <li><a href="<?php echo get_home_url(); ?>" title="Piranha Bytes Italia homepage e notizie">Homepage</a></li>
+            <li><a href="<?php echo pbi_page_permalink_from_slug('staff'); ?>" title="Staf e contatti">Staff</a></li>
+            <li><a href="http://forum.multiplayer.it/forumdisplay.php?332-Gothic-Italia" title="Forum su Multiplayer.it">Forum</a></li>
+            <li><a href="https://www.facebook.com/groups/staffrisenitalia/" title="Iscriviti al gruppo Piranha Bytes Italia su Facebook"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-facebook-white.png" alt="Facebook icon" /></a></li>
+            <li><a href="https://www.youtube.com/user/GothicRisenItalia" title="Segui Piranha Bytes Italia su Youtube"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-youtube-white.png" alt="Youtube icon" /></a></li>
+            <li><a href="https://plus.google.com/+GothicRisenItalia" title="Segui Piranha Bytes Italia su Goolge+"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-googleplus-white.png" alt="Google Plus icon" /></a></li>
+            <li><a href="<?php bloginfo('rss2_url'); ?>" title="Segui il Feed RSS di Piranha Bytes Italia"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-rss-white.png" alt="RSS 2.0 Feed icon" /></a></li>
           </ul>
         </div>
       </nav>
@@ -33,7 +33,7 @@
       <nav class="navbar navbar-default">
         <div class="container">
           <div id="logo" class="navbar-header">
-            <a class="navbar-brand" href="#" title="Piranha Bytes Italia homepage">
+            <a class="navbar-brand" href="<?php echo get_home_url(); ?>" title="Piranha Bytes Italia homepage">
               <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/piranha-bytes-italia-icon.png" width="679" height="759" alt="Piranha Bytes Italia logo" />
             </a>
           </div>
