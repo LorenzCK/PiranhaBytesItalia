@@ -111,6 +111,7 @@ module.exports = function (grunt) {
           'js/button.js',
           'js/carousel.js',
           'js/collapse.js',
+          'js/custom.js',
           'js/dropdown.js',
           'js/modal.js',
           'js/tooltip.js',
