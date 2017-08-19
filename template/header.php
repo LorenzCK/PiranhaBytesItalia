@@ -50,27 +50,14 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gothic <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="<?php echo get_term_link('gothic-saga', 'category'); ?>" title="Notizie relative alla saga di Gothic">Notizie</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Gothic 1</li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Gothic 2</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Gothic 3</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
+                  <li><a href="#">Coming soon…</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elex <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="<?php echo get_term_link('elex', 'category'); ?>" title="Notizie relative ad Elex">Notizie</a></li>
-                  <li><a href="#">Download</a></li>
-                  <li><a href="#">Preview</a></li>
-                  <li><a href="#">Recensioni</a></li>
+                  <li><a href="<?php echo get_term_link('raccolta-stampa-elex', 'category'); ?>" title="Raccolta stampa, articoli ed interviste relative ad Elex">Raccolta Stampa</a></li>
                 </ul>
               </li>
               <li class="dropdown">
@@ -79,16 +66,25 @@
                   <li><a href="<?php echo get_term_link('risen-saga', 'category'); ?>" title="Notizie relative alla saga di Risen">Notizie</a></li>
                   <li role="separator" class="divider"></li>
                   <li class="dropdown-header">Risen 1</li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
+                  <li><a href="<?php echo get_term_link('raccolta-stampa-risen1', 'category'); ?>" title="Raccolta stampa, articoli ed interviste relative a Risen 1">Raccolta stampa</a></li>
+                  <li><a href="<?php echo get_term_link('multimedia-risen1', 'category'); ?>" title="Multimedia relativo a Risen 1">Multimedia</a></li>
+                  <li><a href="<?php echo get_term_link('modding-risen1', 'category'); ?>" title="Modding relativo a Risen 1">Modding</a></li>
+                  <li><a href="<?php echo get_term_link('il-bestiario-risen1', 'category'); ?>" title="Il bestiario di Risen 1">Il bestiario</a></li>
                   <li role="separator" class="divider"></li>
                   <li class="dropdown-header">Risen 2</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
+                  <li><a href="<?php echo get_term_link('raccolta-stampa-risen2', 'category'); ?>" title="Raccolta stampa, articoli ed interviste relative a Risen 2">Raccolta stampa</a></li>
+                  <li><a href="<?php echo get_term_link('making-of-risen2', 'category'); ?>" title="Making of di Risen 2">Making of</a></li>
+                  <li><a href="<?php echo get_term_link('il-contesto-risen2', 'category'); ?>" title="Il contesto e l'ambientazione di Risen 2">Il contesto</a></li>
+                  <li><a href="<?php echo get_term_link('multimedia-risen2', 'category'); ?>" title="Multimedia relativo a Risen 2">Multimedia</a></li>
+                  <li><a href="<?php echo get_term_link('dlc-risen2', 'category'); ?>" title="Downloadable Content relativo a Risen 2">DLC</a></li>
+                  <li><a href="<?php echo get_term_link('modding-risen2', 'category'); ?>" title="Modding relativo a Risen 2">Modding</a></li>
+                  <li><a href="<?php echo get_term_link('supporto-risen2', 'category'); ?>" title="Supporto per Risen 2">Supporto</a></li>
                   <li role="separator" class="divider"></li>
                   <li class="dropdown-header">Risen 3</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
+                  <li><a href="<?php echo get_term_link('raccolta-stampa-risen3', 'category'); ?>" title="Raccolta stampa, articoli ed interviste relative a Risen 3">Raccolta stampa</a></li>
+                  <li><a href="<?php echo get_term_link('il-contesto-risen3', 'category'); ?>" title="Il contesto e l'ambientazione di Risen 3">Il contesto</a></li>
+                  <li><a href="<?php echo get_term_link('multimedia-risen3', 'category'); ?>" title="Multimedia relativo a Risen 3">Multimedia</a></li>
+                  <li><a href="<?php echo get_term_link('supporto-risen3', 'category'); ?>" title="Supporto per Risen 3">Supporto</a></li>
                 </ul>
               </li>
             </ul>
