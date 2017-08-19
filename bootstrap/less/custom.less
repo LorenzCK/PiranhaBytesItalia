@@ -209,7 +209,15 @@ nav.navbar-default {
 #page-content {
     position: relative;
     z-index: 500;
-    padding: 20px 40px;
+
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    @media (min-width: @screen-sm-min) {
+        padding: 20px 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     background-image: url('content-back-0.5.png');
     background-size: 100% auto;
