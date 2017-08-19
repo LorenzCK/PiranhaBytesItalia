@@ -235,17 +235,40 @@ nav.navbar-default {
             padding-left: 1.3em;
             background-image: url('section.png');
             background-repeat: no-repeat;
-            background-position: left center;
-            background-size: auto 100%;
+            background-position: left top;
+            background-size: auto 1.3em;
         }
-    }
 
-    .content {
+        .content {
+            
+            /* Adapt over-large images in mobile */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
 
-        /* Adapt over-large images in mobile */
-        img {
-            max-width: 100%;
-            height: auto;
+        .metadata {
+            margin-top: 2em;
+
+            span {
+                font-weight: bold;
+            }
+            div {
+                padding-left: 1.6em;
+                background-repeat: no-repeat;
+                background-position: left top;
+                background-size: auto 1.1em;
+            }
+            .publish-date {
+                background-image: url('clock.png');
+            }
+            .tags {
+                background-image: url('tag.png');
+            }
+            .comments {
+                background-image: url('comment.png');
+            }
         }
     }
 }

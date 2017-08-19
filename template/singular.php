@@ -11,11 +11,11 @@ if(have_posts()) {
 
     <h1><?php the_title(); ?></h1>
 
-    <div class="content">
-    <?php the_content(); ?>
-    </div>
+    <?php get_template_part('content'); ?>
 
 </article>
+
+<!-- Comments here -->
 
 <?php
 }
