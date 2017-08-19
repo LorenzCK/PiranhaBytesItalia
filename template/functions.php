@@ -29,6 +29,20 @@ add_action('after_setup_theme', 'pbi_setup');
 
 add_filter('show_admin_bar', '__return_false');
 
+function pbi_filter_get_the_terms($terms, $postId, $taxonomy) {
+    // Filtering categories on category archive
+    if(!is_category() || $taxonomy != 'category') {
+        return $terms;
+    }
+
+    $queried_term = get_queried_object();
+
+    return array_filter($terms, function($l) use ($queried_term) {
+        return ($l->term_id != $queried_term->term_id);
+    });
+}
+add_filter('get_the_terms', 'pbi_filter_get_the_terms', 10, 3);
+
 /*
  * Auxiliary functions
  */
