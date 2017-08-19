@@ -204,15 +204,30 @@ nav.navbar-default {
 #page-content {
     position: relative;
     z-index: 500;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding: 20px 40px;
 
     background-image: url('content-back-0.5.png');
     background-size: 100% auto;
     background-repeat: repeat-y;
 
     h1 {
+        margin-bottom: 1em;
         text-align: center;
+    }
+    h2 {
+        margin-bottom: 1em;
+    }
+
+    article {
+        margin-bottom: 3em;
+        padding-bottom: 3em;
+        border-bottom: solid 2px @brand-primary;
+
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
     }
 }
 
