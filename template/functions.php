@@ -47,9 +47,77 @@ add_filter('get_the_terms', 'pbi_filter_get_the_terms', 10, 3);
  * Auxiliary functions
  */
 
+ const CATEGORY_CLASS_MAP = array(
+    'gothic-saga' => 'gothic1',
+    'gothic2' => 'gothic2',
+    // TODO: add Notte del Corvo
+    'gothic3' => 'gothic3',
+    'risen-saga' => 'risen1',
+    'risen2' => 'risen2',
+    'risen3' => 'risen3',
+    'elex' => 'elex'
+);
+
+function pbi_reduce_category_to_section_class($term) {
+    while(!array_key_exists($term->slug, CATEGORY_CLASS_MAP)) {
+        if($term->parent) {
+            $term = get_term($term->parent, 'category');
+            if(is_wp_error($term) || $term == null) {
+                return null;
+            }
+        }
+        else {
+            // Got to root, but cannot be mapped
+            return null;
+        }
+    }
+
+    return CATEGORY_CLASS_MAP[$term->slug];
+}
+
+function pbi_get_section_class_from_categories($terms) {
+    // Each term votes for one section
+    $votes = array();
+    foreach($terms as $t) {
+        $mapped_class = pbi_reduce_category_to_section_class($t);
+        if($mapped_class == null) {
+            continue;
+        }
+
+        if($votes[$mapped_class])
+            $votes[$mapped_class] += 1;
+        else
+            $votes[$mapped_class] = 1;
+    }
+
+    if(sizeof($votes) == 0) {
+        return 'main';
+    }
+
+    // Sort by value (votes) and pick first
+    asort($votes);
+    foreach($votes as $section => $count) {
+        return $section;
+    }
+}
+
 /* Gets the current post's section class */
 function pbi_get_section_class() {
-    return 'gothic1';
+    if(is_singular() && have_posts()) {
+        // Single post, must unroll loop
+        the_post();
+        $section_class = pbi_get_section_class_from_categories(get_the_terms(get_the_ID(), 'category'));
+        rewind_posts();
+
+        return $section_class;
+    }
+
+    else if(is_category()) {
+        return pbi_get_section_class_from_categories(array(get_queried_object()));
+    }
+
+    // Default
+    return 'main';
 }
 
 /* Gets a page's permalink from its slug */
