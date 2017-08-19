@@ -240,26 +240,38 @@ nav.navbar-default {
         }
 
         .content {
-            /* Adapt over-large images in mobile */
+            /* Adapt over-large images */
             img {
                 max-width: 100%;
                 height: auto;
             }
 
-            .alignleft {
-                float: left;
+            .alignleft, .alignright {
+                text-align: center;
+                max-width: 66%;
+                margin-left: auto;
+                margin-right: auto;
             }
-            div.alignleft {
-                margin: 0 16px 16px 0;
-                max-width: 33%;
-            }
-            
-            .alignright {
-                float: right;
-            }
-            div.alignright {
-                margin: 0 8px 16px 16px;
-                max-width: 33%;
+            @media (min-width: @screen-sm-min) {
+                .alignleft, .alignright {
+                    max-width: inherit;
+                    margin-left: inherit;
+                    margin-right: inherit;
+                }
+                .alignleft {
+                    float: left;
+                }
+                div.alignleft {
+                    margin: 0 16px 16px 0;
+                    max-width: 33%;
+                }
+                .alignright {
+                    float: right;
+                }
+                div.alignright {
+                    margin: 0 8px 16px 16px;
+                    max-width: 33%;
+                }
             }
 
             .centered, .aligncenter {
