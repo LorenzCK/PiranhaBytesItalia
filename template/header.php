@@ -51,6 +51,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gothic <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="<?php echo get_term_link('gothic-saga', 'category'); ?>" title="Notizie relative alla saga di Gothic">Notizie</a></li>
+                  <li role="separator" class="divider"></li>
                   <li><a href="#">Coming soon…</a></li>
                 </ul>
               </li>
