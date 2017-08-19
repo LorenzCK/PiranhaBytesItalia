@@ -9,6 +9,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700" rel="stylesheet" />
     <link href="<?php echo get_stylesheet_directory_uri(); ?>/resources/bootstrap.min.css" rel="stylesheet" />
+
+    <?php wp_head(); ?>
   </head>
 
   <body>

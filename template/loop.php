@@ -19,4 +19,6 @@ if(have_posts()) {
 
     }
 }
+
+wp_pagenavi();
 ?>
