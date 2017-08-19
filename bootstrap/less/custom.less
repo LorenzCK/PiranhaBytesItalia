@@ -249,21 +249,44 @@ nav.navbar-default {
             .alignleft {
                 float: left;
             }
-            img.alignleft, div.alignleft {
+            div.alignleft {
                 margin: 0 16px 16px 0;
+                max-width: 33%;
             }
             
             .alignright {
                 float: right;
             }
-            img.alignright, div.alignright {
+            div.alignright {
                 margin: 0 8px 16px 16px;
+                max-width: 33%;
             }
 
             .centered, .aligncenter {
                 text-align: center;
+            }
+            div.centered, div.aligncenter {
                 margin-left: auto;
                 margin-right: auto;
+            }
+
+            div.picture {
+                margin-top: 10px;
+                margin-bottom: 10px;
+
+                div.didascaly {
+                    font-style: italic;
+                    text-align: center;
+                    margin-top: 0.6em;
+                }
+
+                // Auto-enlarge floating pictures to fill space (and center didascalies)
+                &.alignleft, &.alignright {
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
             }
             
             .wp-caption {
