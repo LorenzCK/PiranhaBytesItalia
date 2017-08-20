@@ -12,6 +12,25 @@
     <link href="<?php echo get_stylesheet_directory_uri(); ?>/resources/bootstrap.min.css" rel="stylesheet" />
 
     <?php wp_head(); ?>
+
+    <?php if(is_singular() && have_posts()) : ?>
+      <?php the_post(); ?>
+
+    <!-- Facebook open graph -->
+    <meta property="og:title" content="<?php the_title(); ?> | <?php bloginfo('name'); ?>" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="<?php the_permalink(); ?>" />
+    <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+    <meta property="fb:app_id" content="1966462676957100" />
+    <meta property="fb:admins" content="1173236424" />
+    <?php if(has_post_thumbnail()) :
+      //Gets image properties from thumbnail ID, and extracts URL (first element)
+      $thumbnail_attribs = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
+      $thumbnail_img_src = $thumbnail_attribs[0]; ?><meta property="og:image" content="<?php echo $thumbnail_img_src; ?>" />
+    <?php endif; ?>
+
+      <?php rewind_posts(); ?>
+    <?php endif; ?>
   </head>
 
   <body>
