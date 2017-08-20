@@ -12,6 +12,13 @@ if(!function_exists('pbi_setup')){
         add_theme_support('post-thumbnails');
         add_theme_support('automatic-feed-links');
 
+        // Additional image sizes
+        add_image_size('large-retina', 1280, 1280, false);
+
+        // Remove content processing
+        remove_filter('the_content', 'wpautop');
+        remove_filter('the_excerpt', 'wpautop');
+
         // Remove unused crap
         remove_action('wp_head', 'feed_links_extra', 3);
         remove_action('wp_head', 'rsd_link');
