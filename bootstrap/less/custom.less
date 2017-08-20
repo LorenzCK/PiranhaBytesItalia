@@ -125,11 +125,14 @@ nav.navbar-default {
 
         .dropdown-menu {
             font-size: ceil((@font-size-base * 1.1)); // ~15.4px
-            min-width: 260px; // prettify dropdown menus for short text
 
-            // Support scrolling for long dropdowns on short screens
-            max-height: 65vh;
-            overflow-y: scroll;
+            @media (min-width: @screen-sm-min) {
+                min-width: 260px; // prettify dropdown menus for short text
+
+                // Support scrolling for long dropdowns on short screens
+                max-height: 65vh;
+                overflow-y: scroll;
+            }
         }
     }
 }
