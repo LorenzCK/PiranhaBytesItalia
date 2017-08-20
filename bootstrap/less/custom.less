@@ -138,16 +138,22 @@ nav.navbar-default {
 }
 .navbar-header {
     position: absolute;
-    width: 200px;
-    top: -70px;
+    
+    width: 160px;
+    top: -30px;
+    @media (min-width: @screen-sm-min) {
+        width: 200px;
+        top: -70px;
+    }
 
-    transition-property: width, height;
+    transform: translateY(0px);
+
+    transition-property: transform;
     transition-timing-function: ease;
-    transition-delay: 0.1s;
-    transition-duration: 1.2s;
+    transition-duration: 0.8s;
 
     &.reduced {
-        width: 120px;
+        transform: translateY(-80px);
     }
 
     img {
