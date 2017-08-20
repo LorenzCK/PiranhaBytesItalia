@@ -103,7 +103,7 @@ function pbi_get_section_class_from_categories($terms) {
 
 /* Gets the current post's section class */
 function pbi_get_section_class() {
-    if(is_singular() && have_posts()) {
+    if(is_single() && have_posts()) {
         // Single post, must unroll loop
         the_post();
         $section_class = pbi_get_section_class_from_categories(get_the_terms(get_the_ID(), 'category'));
