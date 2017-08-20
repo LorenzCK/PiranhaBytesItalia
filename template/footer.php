@@ -1,8 +1,6 @@
 
 </div>
 
-      <div class="bottom-background"></div>
-
       <div class="brand-overlay noselect" aria-hidden="true">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/brand-0.5.png" width="630" height="1389" alt="Piranha Bytes Italia background" srcset="<?php echo get_stylesheet_directory_uri(); ?>/resources/brand-0.5.png 315w, <?php echo get_stylesheet_directory_uri(); ?>/resources/brand-1.0.png 630w" />
       </div>
