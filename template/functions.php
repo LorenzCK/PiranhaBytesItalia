@@ -124,3 +124,40 @@ function pbi_get_section_class() {
 function pbi_page_permalink_from_slug($slug) {
     return get_permalink(get_page_by_path($slug));
 }
+
+function pbi_comment_renderer($comment, $args, $depth) {
+    $GLOBALS['comment'] = $comment;
+    
+    switch($comment->comment_type){
+        case '' : ?>
+
+<div <?php comment_class('row'); ?> id="comment-<?php comment_ID(); ?>">
+    <div class="comment-avatar col-xs-3 col-sm-2">
+        <?php echo get_avatar($comment, 80, null, get_comment_author()); ?><br />
+        <?php comment_author_link(); ?>
+    </div>
+
+    <div class="comment-content col-xs-9 col-sm-10">
+        <div class="comment-meta">
+            <div class="comment-date">
+                <a class="comment-permalink" name="comment-<?php echo comment_ID(); ?>" href="<?php echo esc_url(get_comment_link($comment->comment_ID)); ?>"><?php echo get_comment_date(); ?> alle <?php echo get_comment_time(); ?></a>
+            </div>
+            <div class="comment-links">
+                <?php comment_reply_link(array_merge($args, array(
+                    'depth' => $depth,
+                    'max_depth' => $args['max_depth'],
+                    'reply_text' => 'Rispondi',
+                ))); ?>
+                <?php edit_comment_link('(Modifica commento)', ''); ?>
+            </div>
+        </div>
+
+        <div class="comment-body">
+            <?php comment_text(); ?>
+        </div>
+    </div>
+
+            <?php
+            break;
+    }
+}

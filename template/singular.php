@@ -15,6 +15,8 @@ if(have_posts()) {
 
 </article>
 
+<?php comments_template(); ?>
+
 <!-- Comments here -->
 
 <?php

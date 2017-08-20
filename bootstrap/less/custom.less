@@ -292,12 +292,18 @@ nav.navbar-default {
         margin-bottom: 0.6em;
     }
 
+    hr {
+        margin-top: 3em;
+        margin-bottom: 3em;
+        border-top: solid 2px @brand-primary;
+    }
+
     article {
         margin-bottom: 3em;
         padding-bottom: 3em;
         border-bottom: solid 2px @brand-primary;
 
-        &:last-child {
+        &:last-of-type {
             margin-bottom: 0;
             padding-bottom: 0;
             border-bottom: none;
@@ -439,6 +445,49 @@ nav.navbar-default {
                 background-image: url('comment.png');
             }
         }
+    }
+
+    .comment-list {
+        .comment {
+            overflow: hidden;
+            margin-bottom: 1em;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .comment-avatar {
+                text-align: center;
+                word-wrap: break-word;
+                font-weight: bold;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .comment-meta {
+                font-size: 0.8em;
+                color: @gray-light;
+                margin-bottom: 0.5em;
+
+                a {
+                    color: @gray-light;
+                }
+                a:hover {
+                    color: @gray-lighter;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    input, textarea, select {
+        color: #000000;
+    }
+    input#submit {
+        font-weight: bold;
     }
 }
 
