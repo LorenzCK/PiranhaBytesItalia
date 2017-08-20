@@ -1,5 +1,5 @@
 <div class="content">
-<?php the_content(); ?>
+<?php the_content('[ Leggi il resto dell’articolo! ]'); ?>
 </div>
 
 <?php if(!is_page()) : ?>
