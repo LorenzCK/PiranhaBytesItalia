@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <?php
-if(have_posts()) {
+if(have_posts()) :
     the_post();
 ?>
 
@@ -15,21 +15,14 @@ if(have_posts()) {
 
 </article>
 
-<?php comments_template(); ?>
-
-<!-- Comments here -->
-
 <?php
-}
-else {
+if(is_single()) :
+    comments_template();
+endif;
 ?>
 
-<h1>???</h1>
-
-<p>Contenuto non trovato.</p>
-
 <?php
-}
+endif;
 ?>
 
 <?php
