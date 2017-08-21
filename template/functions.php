@@ -132,6 +132,15 @@ function pbi_page_permalink_from_slug($slug) {
     return get_permalink(get_page_by_path($slug));
 }
 
+/* Gets a category's permalink from its slug */
+function pbi_category_link_from_slug($slug) {
+    $term_link = get_term_link($slug, 'category');
+    if(is_wp_error($term_link)) {
+        return '#';
+    }
+    return $term_link;
+}
+
 function pbi_comment_renderer($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment;
     

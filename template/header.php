@@ -69,43 +69,44 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gothic <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="<?php echo get_term_link('gothic-saga', 'category'); ?>" title="Notizie relative alla saga di Gothic">Notizie</a></li>
-                  <li role="separator" class="divider"></li>
                   <li><a href="#">Coming soon…</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="http://www.gothicitalia.it">Vai su Gothic Italia!</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elex <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="<?php echo get_term_link('elex', 'category'); ?>" title="Notizie relative ad Elex">Notizie</a></li>
-                  <li><a href="<?php echo get_term_link('raccolta-stampa-elex', 'category'); ?>" title="Raccolta stampa, articoli ed interviste relative ad Elex">Raccolta Stampa</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('elex'); ?>" title="Notizie relative ad Elex">Notizie</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('raccolta-stampa-elex'); ?>" title="Raccolta stampa, articoli ed interviste relative ad Elex">Raccolta Stampa</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Risen <span class="caret"></span></a>
                 <ul class="dropdown-menu dropdown-menu-right">
-                  <li><a href="<?php echo get_term_link('risen-saga', 'category'); ?>" title="Notizie relative alla saga di Risen">Notizie</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('risen-saga'); ?>" title="Notizie relative alla saga di Risen">Notizie</a></li>
                   <li role="separator" class="divider"></li>
                   <li class="dropdown-header">Risen 1</li>
-                  <li><a href="<?php echo get_term_link('raccolta-stampa-risen1', 'category'); ?>" title="Raccolta stampa, articoli ed interviste relative a Risen 1">Raccolta stampa</a></li>
-                  <li><a href="<?php echo get_term_link('multimedia-risen1', 'category'); ?>" title="Multimedia relativo a Risen 1">Multimedia</a></li>
-                  <li><a href="<?php echo get_term_link('modding-risen1', 'category'); ?>" title="Modding relativo a Risen 1">Modding</a></li>
-                  <li><a href="<?php echo get_term_link('il-bestiario-risen1', 'category'); ?>" title="Il bestiario di Risen 1">Il bestiario</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('raccolta-stampa-risen1'); ?>" title="Raccolta stampa, articoli ed interviste relative a Risen 1">Raccolta stampa</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('il-contesto-risen1'); ?>" title="Il contesto di Risen 1">Il contesto</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('multimedia-risen1'); ?>" title="Multimedia relativo a Risen 1">Multimedia</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('download-risen1'); ?>" title="Modding relativo a Risen 1">Download</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('modding-risen1'); ?>" title="Modding relativo a Risen 1">Modding</a></li>
                   <li role="separator" class="divider"></li>
                   <li class="dropdown-header">Risen 2</li>
-                  <li><a href="<?php echo get_term_link('raccolta-stampa-risen2', 'category'); ?>" title="Raccolta stampa, articoli ed interviste relative a Risen 2">Raccolta stampa</a></li>
-                  <li><a href="<?php echo get_term_link('making-of-risen2', 'category'); ?>" title="Making of di Risen 2">Making of</a></li>
-                  <li><a href="<?php echo get_term_link('il-contesto-risen2', 'category'); ?>" title="Il contesto e l'ambientazione di Risen 2">Il contesto</a></li>
-                  <li><a href="<?php echo get_term_link('multimedia-risen2', 'category'); ?>" title="Multimedia relativo a Risen 2">Multimedia</a></li>
-                  <li><a href="<?php echo get_term_link('dlc-risen2', 'category'); ?>" title="Downloadable Content relativo a Risen 2">DLC</a></li>
-                  <li><a href="<?php echo get_term_link('modding-risen2', 'category'); ?>" title="Modding relativo a Risen 2">Modding</a></li>
-                  <li><a href="<?php echo get_term_link('supporto-risen2', 'category'); ?>" title="Supporto per Risen 2">Supporto</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('raccolta-stampa-risen2'); ?>" title="Raccolta stampa, articoli ed interviste relative a Risen 2">Raccolta stampa</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('making-of-risen2'); ?>" title="Making of di Risen 2">Making of</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('il-contesto-risen2'); ?>" title="Il contesto e l'ambientazione di Risen 2">Il contesto</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('multimedia-risen2'); ?>" title="Multimedia relativo a Risen 2">Multimedia</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('dlc-risen2'); ?>" title="Downloadable Content relativo a Risen 2">DLC</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('modding-risen2'); ?>" title="Modding relativo a Risen 2">Modding</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('supporto-risen2'); ?>" title="Supporto per Risen 2">Supporto</a></li>
                   <li role="separator" class="divider"></li>
                   <li class="dropdown-header">Risen 3</li>
-                  <li><a href="<?php echo get_term_link('raccolta-stampa-risen3', 'category'); ?>" title="Raccolta stampa, articoli ed interviste relative a Risen 3">Raccolta stampa</a></li>
-                  <li><a href="<?php echo get_term_link('il-contesto-risen3', 'category'); ?>" title="Il contesto e l'ambientazione di Risen 3">Il contesto</a></li>
-                  <li><a href="<?php echo get_term_link('multimedia-risen3', 'category'); ?>" title="Multimedia relativo a Risen 3">Multimedia</a></li>
-                  <li><a href="<?php echo get_term_link('supporto-risen3', 'category'); ?>" title="Supporto per Risen 3">Supporto</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('raccolta-stampa-risen3'); ?>" title="Raccolta stampa, articoli ed interviste relative a Risen 3">Raccolta stampa</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('il-contesto-risen3'); ?>" title="Il contesto e l'ambientazione di Risen 3">Il contesto</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('multimedia-risen3'); ?>" title="Multimedia relativo a Risen 3">Multimedia</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('supporto-risen3'); ?>" title="Supporto per Risen 3">Supporto</a></li>
                 </ul>
               </li>
             </ul>
