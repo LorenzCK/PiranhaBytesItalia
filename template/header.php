@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700" rel="stylesheet" />
     <link href="<?php echo get_stylesheet_directory_uri(); ?>/resources/bootstrap.min.css" rel="stylesheet" />
 
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/resources/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/resources/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/resources/favicon.ico">
+
     <?php wp_head(); ?>
 
     <?php if(is_singular() && have_posts()) : ?>
