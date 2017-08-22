@@ -259,10 +259,19 @@ nav.navbar-default {
     margin: 0;
     z-index: 600;
 
+    .container {
+        height: 100%;
+        text-align: center;
+    }
+
     img {
         width: 100%;
+        @media (min-width: @screen-sm-min) {
+            width: 75%;
+        }
         height: 100%;
         object-fit: contain;
+        object-position: center bottom;
     }
 }
 

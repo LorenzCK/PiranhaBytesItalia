@@ -124,7 +124,9 @@
     <div class="wrapper <?php echo $section_class; ?>">
 
       <div class="section-header noselect" aria-hidden="true">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/headers/<?php echo $section_class; ?>-0.5.png" srcset="<?php echo get_stylesheet_directory_uri(); ?>/resources/headers/<?php echo $section_class; ?>-0.5.png 300w, <?php echo get_stylesheet_directory_uri(); ?>/resources/headers/<?php echo $section_class; ?>-1.0.png 600w" />
+        <div class="container">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/headers/<?php echo $section_class; ?>-0.5.png" srcset="<?php echo get_stylesheet_directory_uri(); ?>/resources/headers/<?php echo $section_class; ?>-0.5.png 300w, <?php echo get_stylesheet_directory_uri(); ?>/resources/headers/<?php echo $section_class; ?>-1.0.png 600w" />
+        </div>
       </div>
 
       <div id="page-content" class="container">
