@@ -334,6 +334,7 @@ nav.navbar-default {
                 height: auto;
             }
 
+            // Default floating elements to center on mobile
             .alignleft, .alignright {
                 text-align: center;
                 max-width: 66%;
@@ -341,6 +342,7 @@ nav.navbar-default {
                 margin-right: auto;
             }
             @media (min-width: @screen-sm-min) {
+                // On small, float elements correctly
                 .alignleft, .alignright {
                     max-width: inherit;
                     margin-left: inherit;
@@ -375,13 +377,25 @@ nav.navbar-default {
                 margin-bottom: 10px;
                 text-align: center;
 
+                // Default to full on mobile
+                width: 100%;
+                @media (min-width: @screen-sm-min) {
+                    &:not(.full) {
+                        // Constrain to 2/3 and center on small
+                        width: auto;
+                        max-width: 66%;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+
                 div.didascaly {
                     font-style: italic;
                     text-align: center;
                     margin-top: 0.6em;
                 }
 
-                // Auto-enlarge floating pictures to fill space (and center didascalies)
+                // Auto-enlarge images in floating pictures to fill space
                 &.alignleft, &.alignright {
                     img {
                         width: 100%;
