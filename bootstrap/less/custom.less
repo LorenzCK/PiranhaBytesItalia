@@ -17,6 +17,19 @@ a {
 }
 
 /* Navbars */
+.navbar-container {
+    transform: translateY(0px);
+    
+    transition-property: transform;
+    transition-timing-function: ease-out;
+    transition-duration: 0.4s;
+
+    @media (max-width: @screen-xs-max) {
+        &.scrolling-down:not(.open) {
+            transform: translateY(-80px); // 50px + 70px navbar heights
+        }
+    }
+}
 .navbar-top {
     min-height: 50px;
     height: 50px;
@@ -146,20 +159,19 @@ nav.navbar-default {
         top: -70px;
     }
 
-    transform: translateY(0px);
-
-    transition-property: transform;
-    transition-timing-function: ease;
-    transition-duration: 0.8s;
-
-    &.reduced {
-        transform: translateY(-80px);
-    }
-
     img {
         width: 100%;
         height: auto;
     }
+
+    transform: translateY(0px);
+    
+    transition-property: transform;
+    transition-timing-function: ease;
+    transition-duration: 0.8s;
+}
+.navbar-container.open .navbar-header {
+    transform: translateY(-80px);
 }
 
 .brand-overlay {

@@ -1,11 +1,25 @@
 // Init
 $(document).ready(function() {
-    // Navbar collapse/expand
-    $('nav.navbar').on('show.bs.collapse', function () {
-        $('#logo').addClass('reduced');
+    // Scroll handling
+    var scrollTopMemory = $(document).scrollTop();
+    $(window).scroll(function() {
+        var scrollTop = $(document).scrollTop();
+        var offset = (scrollTop - scrollTopMemory);
+        if(offset >= 8) {
+            $('div.navbar-container').addClass('scrolling-down');
+        }
+        else if(offset <= -8) {
+            $('div.navbar-container').removeClass('scrolling-down');
+        }
+        scrollTopMemory = scrollTop;
     });
-    $('nav.navbar').on('hide.bs.collapse', function () {
-        $('#logo').removeClass('reduced');
+
+    // Navbar collapse/expand
+    $('nav.navbar-default').on('show.bs.collapse', function () {
+        $('div.navbar-container').addClass('open');
+    });
+    $('nav.navbar-default').on('hide.bs.collapse', function () {
+        $('div.navbar-container').removeClass('open');
     });
 
     // Content toggles
