@@ -19,22 +19,26 @@
 
     <?php if(is_singular() && have_posts()) : ?>
       <?php the_post(); ?>
-
     <!-- Facebook open graph -->
-    <meta property="og:title" content="<?php the_title(); ?> | <?php bloginfo('name'); ?>" />
+    <meta property="og:title" content="<?php wp_title('|', true, 'right'); bloginfo('name'); ?>" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="<?php the_permalink(); ?>" />
-    <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
-    <meta property="fb:app_id" content="1966462676957100" />
-    <meta property="fb:admins" content="1173236424" />
     <?php if(has_post_thumbnail()) :
       //Gets image properties from thumbnail ID, and extracts URL (first element)
       $thumbnail_attribs = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
-      $thumbnail_img_src = $thumbnail_attribs[0]; ?><meta property="og:image" content="<?php echo $thumbnail_img_src; ?>" />
+      ?><meta property="og:image" content="<?php echo $$thumbnail_attribs[0]; ?>" /><meta property="og:image:width" content="<?php echo $$thumbnail_attribs[1]; ?>" /><meta property="og:image:height" content="<?php echo $$thumbnail_attribs[2]; ?>" />
+    <?php else :
+      ?><meta property="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/resources/piranha-bytes-italia-logo.jpg" /><meta property="og:image:width" content="1280" /><meta property="og:image:height" content="1280" />
     <?php endif; ?>
-
       <?php rewind_posts(); ?>
+    <?php else: ?>
+    <meta property="og:title" content="<?php wp_title('|', true, 'right'); bloginfo('name'); ?>" />
+    <meta property="og:type" content="website" />
     <?php endif; ?>
+    
+    <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+    <meta property="fb:app_id" content="1966462676957100" />
+    <meta property="fb:admins" content="1173236424" />
   </head>
 
   <body>
@@ -73,14 +77,20 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gothic <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Coming soon…</a></li>
+                  <li><a href="<?php echo pbi_page_permalink_from_slug('gothic'); ?>" title="Descrizione di Gothic">Gothic</a></li>
+                  <li><a href="<?php echo pbi_page_permalink_from_slug('gothic-2'); ?>" title="Descrizione di Gothic II">Gothic II</a></li>
+                  <li><a href="<?php echo pbi_page_permalink_from_slug('gothic-2-la-notte-del-corvo'); ?>" title="Descrizione di Gothic II: La Notte del Corvo">Gothic II: La Notte del Corvo</a></li>
+                  <li><a href="<?php echo pbi_page_permalink_from_slug('gothic-3'); ?>" title="Descrizione di Gothic 3">Gothic 3</a></li>
+                  <li><a href="<?php echo pbi_page_permalink_from_slug('gothic-3-forsaken-gods'); ?>" title="Descrizione di Gothic 3: Forsaken Gods">Gothic 3: Forsaken Gods</a></li>
+
                   <li role="separator" class="divider"></li>
-                  <li><a href="http://www.gothicitalia.it">Vai su Gothic Italia!</a></li>
+                  <li><a href="http://www.gothicitalia.it">Visita Gothic Italia!</a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elex <span class="caret"></span></a>
                 <ul class="dropdown-menu">
+                  <li><a href="<?php echo pbi_page_permalink_from_slug('elex'); ?>" title="Descrizione di Elex">Il gioco</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('elex'); ?>" title="Notizie relative ad Elex">Notizie</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('raccolta-stampa-elex'); ?>" title="Raccolta stampa, articoli ed interviste relative ad Elex">Raccolta Stampa</a></li>
                 </ul>
@@ -89,26 +99,32 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Risen <span class="caret"></span></a>
                 <ul class="dropdown-menu dropdown-menu-right">
                   <li><a href="<?php echo pbi_category_link_from_slug('risen-saga'); ?>" title="Notizie relative alla saga di Risen">Notizie</a></li>
+
                   <li role="separator" class="divider"></li>
                   <li class="dropdown-header">Risen 1</li>
-                  <li><a href="<?php echo pbi_category_link_from_slug('raccolta-stampa-risen1'); ?>" title="Raccolta stampa, articoli ed interviste relative a Risen 1">Raccolta stampa</a></li>
+                  <li><a href="<?php echo pbi_page_permalink_from_slug('risen'); ?>" title="Descrizione di Risen 1">Il gioco</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('il-contesto-risen1'); ?>" title="Il contesto di Risen 1">Il contesto</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('raccolta-stampa-risen1'); ?>" title="Raccolta stampa, articoli ed interviste relative a Risen 1">Raccolta stampa</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('multimedia-risen1'); ?>" title="Multimedia relativo a Risen 1">Multimedia</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('download-risen1'); ?>" title="Modding relativo a Risen 1">Download</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('modding-risen1'); ?>" title="Modding relativo a Risen 1">Modding</a></li>
+
                   <li role="separator" class="divider"></li>
                   <li class="dropdown-header">Risen 2</li>
+                  <li><a href="<?php echo pbi_page_permalink_from_slug('risen-2-dark-waters'); ?>" title="Descrizione di Risen 2">Il gioco</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('il-contesto-risen2'); ?>" title="Il contesto e l'ambientazione di Risen 2">Il contesto</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('raccolta-stampa-risen2'); ?>" title="Raccolta stampa, articoli ed interviste relative a Risen 2">Raccolta stampa</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('making-of-risen2'); ?>" title="Making of di Risen 2">Making of</a></li>
-                  <li><a href="<?php echo pbi_category_link_from_slug('il-contesto-risen2'); ?>" title="Il contesto e l'ambientazione di Risen 2">Il contesto</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('multimedia-risen2'); ?>" title="Multimedia relativo a Risen 2">Multimedia</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('dlc-risen2'); ?>" title="Downloadable Content relativo a Risen 2">DLC</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('modding-risen2'); ?>" title="Modding relativo a Risen 2">Modding</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('supporto-risen2'); ?>" title="Supporto per Risen 2">Supporto</a></li>
+
                   <li role="separator" class="divider"></li>
                   <li class="dropdown-header">Risen 3</li>
-                  <li><a href="<?php echo pbi_category_link_from_slug('raccolta-stampa-risen3'); ?>" title="Raccolta stampa, articoli ed interviste relative a Risen 3">Raccolta stampa</a></li>
+                  <li><a href="<?php echo pbi_page_permalink_from_slug('risen-3-titan-lords'); ?>" title="Descrizione di Risen 3">Il gioco</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('il-contesto-risen3'); ?>" title="Il contesto e l'ambientazione di Risen 3">Il contesto</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('raccolta-stampa-risen3'); ?>" title="Raccolta stampa, articoli ed interviste relative a Risen 3">Raccolta stampa</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('multimedia-risen3'); ?>" title="Multimedia relativo a Risen 3">Multimedia</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('supporto-risen3'); ?>" title="Supporto per Risen 3">Supporto</a></li>
                 </ul>
