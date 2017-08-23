@@ -129,7 +129,18 @@ function pbi_get_section_class() {
 
 /* Gets a page's permalink from its slug */
 function pbi_page_permalink_from_slug($slug) {
-    return get_permalink(get_page_by_path($slug));
+    $pages = get_posts(array(
+        'name'        => $slug,
+        'post_type'   => 'page',
+        'post_status' => 'publish',
+        'numberposts' => 1
+    ));
+    if($pages) {
+        return get_permalink($pages[0]);
+    }
+    else {
+        return '#not-found';
+    }
 }
 
 /* Gets a category's permalink from its slug */
