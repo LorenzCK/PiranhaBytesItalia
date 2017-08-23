@@ -16,9 +16,12 @@ if(have_posts()) {
 </article>
 
 <?php
-
     }
 }
+?>
 
+<hr />
+
+<?php
 wp_pagenavi();
 ?>

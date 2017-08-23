@@ -293,7 +293,7 @@ nav.navbar-default {
     margin-left: 20px;
     margin-right: 20px;
     @media (min-width: @screen-sm-min) {
-        padding: 20px 40px;
+        padding: 20px 40px 40px 40px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -303,7 +303,7 @@ nav.navbar-default {
     background-repeat: repeat-y;
 
     h1 {
-        margin-bottom: 1em;
+        margin-bottom: 40px;
         text-align: center;
     }
     h2 {
@@ -312,14 +312,24 @@ nav.navbar-default {
     }
 
     hr {
-        margin-top: 3em;
-        margin-bottom: 3em;
+        margin-top: 40px;
+        margin-bottom: 40px;
         border-top: solid 2px @brand-primary;
+
+        &.top-edge {
+            margin-top: -20px;
+            margin-bottom: 0;
+        }
+        &.bottom-edge {
+            margin-top: 40px;
+            margin-bottom: 0;
+        }
     }
 
     article {
-        margin-bottom: 3em;
-        padding-bottom: 3em;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        padding-bottom: 40px;
         border-bottom: solid 2px @brand-primary;
 
         &:last-of-type {
@@ -388,6 +398,11 @@ nav.navbar-default {
                 margin-top: 10px;
                 margin-bottom: 10px;
                 text-align: center;
+
+                &.no-margin {
+                    margin-top: -20px;
+                    margin-bottom: 0;
+                }
 
                 // Default to full on mobile
                 width: 100%;
@@ -548,6 +563,7 @@ nav.navbar-default {
     span.pages {
         display: block;
         margin-bottom: 2px;
+        font-weight: bold;
     }
 
     span, a {

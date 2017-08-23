@@ -159,6 +159,22 @@ function pbi_category_link_from_slug($slug) {
     return $term_link;
 }
 
+/* Checks whether the current page if a subpage of another page (by slug) */
+function pbi_is_subpage($parent_slug) {
+    if(!is_page()) {
+        // Is this even a page?
+        return false;
+    }
+    
+    global $post;
+    if(!$post->post_parent) {
+        return false;
+    }
+
+    $parent = get_post($post->post_parent);
+    return ($parent->post_name == $parent_slug);
+}
+
 function pbi_comment_renderer($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment;
     
