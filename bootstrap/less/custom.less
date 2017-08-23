@@ -185,16 +185,12 @@ nav.navbar-default {
 
 .wrapper {
     width: 100%;
-    position: relative;
+    height: 100%;
+    position: static;
     //min-height: 1024px; // adapt to background
     padding-top: 280px; // fit top .navbar
     padding-bottom: 5em;
     overflow: hidden;
-
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    background-attachment: fixed;
 
     .bottom-background {
         display: none;
@@ -222,6 +218,18 @@ nav.navbar-default {
         .responsive-background('backgrounds/gothic1');
     }
 
+    &.gothic2 {
+        .responsive-background('backgrounds/gothic2');
+    }
+
+    &.gothic2-raven {
+        .responsive-background('backgrounds/gothic2-raven');
+    }
+
+    &.gothic3 {
+        .responsive-background('backgrounds/gothic3');
+    }
+
     &.risen1 {
         .responsive-background('backgrounds/risen1');
 
@@ -247,6 +255,10 @@ nav.navbar-default {
     &.elex {
         .responsive-background('backgrounds/elex');
     }
+
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-attachment: fixed !important;
 }
 
 .section-header {
