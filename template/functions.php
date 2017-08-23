@@ -119,6 +119,13 @@ function pbi_get_section_class() {
         return $section_class;
     }
 
+    else if(is_page()) {
+        $page_class_name = get_field('game_wrapper_class');
+        if($page_class_name) {
+            return trim($page_class_name);
+        }
+    }
+
     else if(is_category()) {
         return pbi_get_section_class_from_categories(array(get_queried_object()));
     }
