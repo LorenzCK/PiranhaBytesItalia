@@ -66,6 +66,11 @@
               <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/piranha-bytes-italia-icon.png" width="679" height="759" alt="Piranha Bytes Italia logo" />
             </a>
           </div>
+          <div class="social-bar">
+            <a href="https://www.facebook.com/groups/staffrisenitalia/" title="Iscriviti al gruppo Piranha Bytes Italia su Facebook"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-facebook-black.png" alt="Facebook icon" /></a>
+            <a href="https://www.youtube.com/user/GothicRisenItalia" title="Segui Piranha Bytes Italia su Youtube"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-youtube-black.png" alt="Youtube icon" /></a>
+            <a href="https://plus.google.com/+GothicRisenItalia" title="Segui Piranha Bytes Italia su Google+"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-googleplus-black.png" alt="Google Plus icon" /></a>
+          </div>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Espandi menù di navigazione</span>
             <span class="icon-bar"></span>

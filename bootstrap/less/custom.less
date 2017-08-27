@@ -178,6 +178,31 @@ nav.navbar-default {
     transform: translateY(-80px);
 }
 
+.social-bar {
+    position: absolute;
+    line-height: 68px;
+    height: 70px;
+    margin-left: 130px;
+
+    display: block;
+    @media (min-width: @screen-sm-min) {
+        display: none;
+    }
+
+    a {
+        display: inline-block;
+        margin-right: 6px;
+
+        img {
+            width: auto;
+            height: 21px;
+        }
+    }
+}
+.navbar-container.open .social-bar {
+    display: none;
+}
+
 .brand-overlay {
     position: fixed;
     top: 50px;
