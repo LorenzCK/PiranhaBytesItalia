@@ -153,6 +153,7 @@ nav.navbar-default {
         }
     }
 }
+
 .navbar-header {
     position: absolute;
     
@@ -492,14 +493,15 @@ nav.navbar-default {
                     }
                 }
 
-                // Section logos fixed to 66% on small
-                @media (min-width: @screen-sm-min) {
-                    &.section-logo {
-                        width: 66%;
+                &.section-logo {
+                    // Constrain to max 66% width on desktop sizes
+                    @media (min-width: @screen-sm-min) {
+                        max-width: 66%;
+                    }
 
-                        img {
-                            width: 100%;
-                        }
+                    img {
+                        width: auto;
+                        max-height: 280px;
                     }
                 }
             }
