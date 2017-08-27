@@ -1,9 +1,9 @@
 /* Custom Piranha Bytes Italia styles */
 
-.responsive-background(@rootname) {
-    background-image: url('@{rootname}-0.5.jpg');
+.responsive-background(@rootname, @extension: 'jpg') {
+    background-image: url('@{rootname}-0.5.@{extension}');
     @media (min-width: @screen-sm-min) {
-        background-image: url('@{rootname}-1.0.jpg');
+        background-image: url('@{rootname}-1.0.@{extension}');
     }
 }
 
@@ -92,7 +92,7 @@ nav.navbar-default {
     > .container  {
         padding-left: 0;
         padding-right: 0;
-        
+
         > div.collapse {
             // Fix height, when not on mobile
             @media (min-width: @screen-sm-min) {
@@ -197,6 +197,23 @@ nav.navbar-default {
         width: 100%;
         height: auto;
     }
+}
+
+.rays-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1010;
+
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    .responsive-background('backgrounds/rays', 'png');
 }
 
 .wrapper {

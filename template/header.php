@@ -135,6 +135,8 @@
       </nav>
     </div><!--/.navbar-container -->
 
+    <div class="rays-cover noselect"></div>
+
     <?php $section_class = pbi_get_section_class(); ?>
 
     <div class="wrapper <?php echo $section_class; ?>">
