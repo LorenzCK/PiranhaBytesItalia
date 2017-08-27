@@ -21,8 +21,7 @@ if(have_posts()) :
 
 <hr class="bottom-edge" />
 
-<php
+<?php
 endif;
 
 get_footer();
-?>

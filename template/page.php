@@ -28,4 +28,3 @@ else {
 endif;
 
 get_footer();
-?>
