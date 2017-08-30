@@ -21,7 +21,7 @@ if(comments_open()) {
 else {
 ?>
 
-    <p>Non è possibile scrivere nuovi commenti in questo articolo.</p>
+    <p class="comments-closed">Non è possibile scrivere nuovi commenti in questo articolo.</p>
 
 <?php
 }
