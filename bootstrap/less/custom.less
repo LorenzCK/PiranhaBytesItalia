@@ -60,7 +60,13 @@ a {
         line-height: 50px;
     }
     li {
-        margin-left: 1.5em;
+        margin-left: 20px;
+
+        &.extra-space {
+            @media (min-width: @screen-md-min) {
+                margin-left: 40px;
+            }
+        }
 
         img {
             width: auto;
