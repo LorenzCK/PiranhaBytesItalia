@@ -15,6 +15,9 @@ if(!function_exists('pbi_setup')){
         // Additional image sizes
         add_image_size('large-retina', 1280, 1280, false);
 
+        // Additional shortcodes
+        add_shortcode('youtube', 'pbi_youtube_shortcode_handler');
+
         // Remove content processing
         remove_filter('the_content', 'wpautop');
         remove_filter('the_excerpt', 'wpautop');
@@ -210,4 +213,29 @@ function pbi_comment_renderer($comment, $args, $depth) {
             <?php
             break;
     }
+}
+
+/* SHORTCODES */
+
+function pbi_youtube_shortcode_handler($atts, $content = null) {
+    $a = shortcode_atts(array(
+        'id' => '',
+        'width' => 600,
+        'class' => null
+    ), $atts, 'youtube');
+    
+    if(!$a['id']) {
+        return 'No ID given';
+    }
+    if(!is_int($a['width'])) {
+        return 'Non-integer width';
+    }
+
+    $ret = '<div class="video-player youtube';
+    if($a['class']) {
+        $ret .= ' ' . $a['class'];
+    }
+    $ret .= '"><div><iframe width="' . $a['width'] . '" height="' . intval($a['width'] * 0.5625) . '" src="https://www.youtube-nocookie.com/embed/' . $a['id'] . '?rel=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div></div>';
+
+    return $ret;
 }
