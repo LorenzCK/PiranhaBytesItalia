@@ -54,6 +54,42 @@ function pbi_filter_get_the_terms($terms, $postId, $taxonomy) {
 add_filter('get_the_terms', 'pbi_filter_get_the_terms', 10, 3);
 
 /*
+ * Admin meta box
+ */
+function pbi_post_information_writer() {
+    ?>
+        <p>
+            <b>Immagini:</b> <code>[image id=""]</code><br />
+            Parametri opzionali:
+                <code>size="small|medium|large|thumbnail"</code>,
+                <code>link="true|false"</code>,
+                <code>didascaly=""</code>,
+                <code>class="alignleft|aligncenter|alignright"</code>.
+        </p>
+
+        <p>
+            <b>Youtube:</b> <code>[youtube id=""]</code><br />
+            Parametri opzionali:
+            <code>class="alignleft|aligncenter|alignright"</code>.
+        </p>
+
+        <p><a href="https://docs.google.com/document/d/1WbKZUuIZZ8uA_x0S_G5-6A3RVTY1C1Vg8QSmwIL5ESE/edit?usp=sharing">Guida contenuti Piranha Bytes Italia</a> su Google Docs.</p>
+    <?php
+}
+
+function pbi_register_meta_box() {
+    add_meta_box(
+        'pbi_post_information',
+        'Informazioni per la redazione',
+        'pbi_post_information_writer',
+        'post',
+        'normal',
+        'high'
+    );
+}
+add_action('add_meta_boxes', 'pbi_register_meta_box');
+
+/*
  * Auxiliary functions
  */
 
