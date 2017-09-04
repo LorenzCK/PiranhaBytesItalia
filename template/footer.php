@@ -6,17 +6,24 @@
       </div>
 
       <footer>
-        <div class="container">
-          <div class="row hidden-xs">
-            <div class="col-sm-6">
-              Scheletro
+        <div class="container-fluid characters hidden-xs">
+          <div class="row">
+            <div class="col-sm-6 fred">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/fred-0.3.png" alt="Fred" srcset="<?php echo get_stylesheet_directory_uri(); ?>/resources/fred-0.3.png 180w, <?php echo get_stylesheet_directory_uri(); ?>/resources/fred-0.6.png 359w, <?php echo get_stylesheet_directory_uri(); ?>/resources/fred-1.0.png 599w" />
+              <a href="<?php echo pbi_page_permalink_from_slug('partner-websites'); ?>" title="Web partner" class="web-partner"></a>
+              <a href="<?php echo pbi_page_permalink_from_slug('staff'); ?>" title="Staff e contatti" class="staff"></a>
+              <a href="http://forum.multiplayer.it/forumdisplay.php?332-Gothic-Italia" title="Forum su Multiplayer.it" class="forum"></a>
             </div>
 
-            <div class="col-sm-6">
-              Gnomo
+            <div class="col-sm-6 jaffar">
+              <a href="<?php echo pbi_page_permalink_from_slug('donazione'); ?>" title="Donazioni">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/jaffar-0.3.png" alt="Jaffar" srcset="<?php echo get_stylesheet_directory_uri(); ?>/resources/jaffar-0.3.png 112w, <?php echo get_stylesheet_directory_uri(); ?>/resources/jaffar-0.6.png 224w, <?php echo get_stylesheet_directory_uri(); ?>/resources/jaffar-1.0.png 374w" />
+              </a>
             </div>
           </div>
+        </div>
 
+        <div class="container">
           <div class="row">
             <div class="col-xs-6 visible-xs-block access-links">
               <ul>

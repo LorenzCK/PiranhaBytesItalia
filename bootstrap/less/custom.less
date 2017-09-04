@@ -258,7 +258,6 @@ nav.navbar-default {
     position: static;
     //min-height: 1024px; // adapt to background
     padding-top: 280px; // fit top .navbar
-    padding-bottom: 5em;
     overflow: hidden;
 
     .bottom-background {
@@ -734,10 +733,10 @@ footer {
     display: block;
     padding-top: 2em;
     padding-bottom: 2em;
-    @media (min-width: @screen-sm-min) {
-        padding-bottom: 4em;
-    }
     margin-top: 5em;
+    @media (min-width: @screen-sm-min) {
+        margin-top: 0;
+    }
     z-index: 900;
 
     background-color: @brand-primary;
@@ -747,13 +746,60 @@ footer {
         color: white;
     }
 
+    .characters {
+        max-height: 400px;
+
+        div {
+            padding: 0;
+        }
+
+        .fred, .jaffar {
+            img {
+                max-width: 100%;
+                width: auto;
+                max-height: 400px;
+            }
+        }
+        .fred {
+            position: relative;
+
+            a {
+                display: block;
+                position: absolute;
+            }
+            a.web-partner {
+                top: 35px;
+                left: 20px;
+                width: 135px;
+                height: 95px;
+            }
+            a.staff {
+                top: 5px;
+                left: 155px;
+                width: 135px;
+                height: 75px;
+            }
+            a.forum {
+                top: 80px;
+                left: 230px;
+                width: 170px;
+                height: 80px;
+            }
+        }
+        .jaffar {
+            text-align: right;
+        }
+    }
+
     .copyright {
         margin-top: 2em;
         font-size: 0.8em;
 
         color: rgb(0, 96, 91);
         @media (min-width: @screen-sm-min) {
-            color: rgb(180, 210, 210);
+            font-size: 0.9em;
+            text-align: center;
+            color: #577575;
         }
     }
 
