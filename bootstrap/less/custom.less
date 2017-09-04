@@ -737,14 +737,24 @@ footer {
     @media (min-width: @screen-sm-min) {
         padding-bottom: 4em;
     }
+    margin-top: 5em;
     z-index: 900;
 
     background-color: @brand-primary;
     color: rgb(0, 96, 91);
+    @media (min-width: @screen-sm-min) {
+        background: linear-gradient(180deg, transparent, black 50%);
+        color: white;
+    }
 
     .copyright {
-        color: rgb(0, 96, 91);
+        margin-top: 2em;
         font-size: 0.8em;
+
+        color: rgb(0, 96, 91);
+        @media (min-width: @screen-sm-min) {
+            color: rgb(180, 210, 210);
+        }
     }
 
     ul {
@@ -752,8 +762,14 @@ footer {
         margin: 0;
         padding: 0;
 
+        li.header {
+            font-weight: bold;
+            border-bottom: solid 2px rgb(0, 96, 91);
+        }
+
         li.icon-list {
             margin-top: 12px;
+            line-height: 30px;
 
             a {
                 margin-right: 12px;
@@ -775,15 +791,6 @@ footer {
         color: black;
         font-weight: bold;
         text-decoration: none;
-    }
-
-    .col-sm-6:first-child {
-        margin-bottom: 2em;
-
-        @media (min-width: @screen-sm-min) {
-            margin-bottom: 0;
-            border-right: solid 1px rgb(0, 147, 138);
-        }
     }
 }
 
