@@ -19,7 +19,7 @@ a {
 /* Navbars */
 .navbar-container {
     transform: translateY(0px);
-    
+
     transition-property: transform;
     transition-timing-function: ease-out;
     transition-duration: 0.4s;
@@ -104,7 +104,7 @@ nav.navbar-default {
             @media (min-width: @screen-sm-min) {
                 height: @navbar-height;
             }
-            
+
             text-align: right;
             @media (min-width: @screen-md-min) {
                 text-align: center;
@@ -117,7 +117,7 @@ nav.navbar-default {
             display: inline-block;
             float: none;
         }
-        
+
         > li {
             > a {
                 font-weight: bold;
@@ -162,7 +162,7 @@ nav.navbar-default {
 
 .navbar-header {
     position: absolute;
-    
+
     width: 160px;
     top: -30px;
     @media (min-width: @screen-sm-min) {
@@ -176,7 +176,7 @@ nav.navbar-default {
     }
 
     transform: translateY(0px);
-    
+
     transition-property: transform;
     transition-timing-function: ease;
     transition-duration: 0.8s;
@@ -313,7 +313,7 @@ nav.navbar-default {
 
     &.risen2 {
         .responsive-background('backgrounds/risen2');
-        
+
         .bottom-background {
             display: block;
             .responsive-background('backgrounds/risen2-bottom');
@@ -499,7 +499,7 @@ nav.navbar-default {
                     width: 33%;
                     margin-left: auto;
                     margin-right: auto;
-                    
+
                     @media (min-width: @screen-sm-min) {
                         width: auto;
                         max-width: 200px;
@@ -510,7 +510,7 @@ nav.navbar-default {
                     width: 50%;
                     margin-left: auto;
                     margin-right: auto;
-                    
+
                     @media (min-width: @screen-sm-min) {
                         width: auto;
                         max-width: 33%;
@@ -551,7 +551,7 @@ nav.navbar-default {
                     }
                 }
             }
-            
+
             .wp-caption {
                 text-align: center;
                 font-style: italic;
@@ -566,14 +566,14 @@ nav.navbar-default {
                 margin: 0.6em 0 0 0;
                 padding: 0;
             }
-            
+
             /* Interviews */
             .question {
                 margin: 1em 0 0.5em 0;
                 font-weight: bold;
             }
             .interviewer {
-                color: @brand-primary;
+                color: #3396ff;
             }
             .answer {
                 margin: 0.5em 0;
@@ -583,7 +583,7 @@ nav.navbar-default {
                 font-weight: bold;
                 color: @brand-complementary;
             }
-            
+
             .post-separator {
                 display: block;
                 width: 100%;
@@ -631,7 +631,7 @@ nav.navbar-default {
             @media (min-width: @screen-md-min) {
                 max-width: 66%;
             }
-            
+
             margin: 20px auto;
 
             > div {
@@ -809,16 +809,18 @@ footer {
         padding: 0;
 
         li.header {
+            color: black;
             font-weight: bold;
-            border-bottom: solid 2px rgb(0, 96, 91);
+            border-bottom: solid 2px black;
+            margin-bottom: 6px;
         }
 
         li.icon-list {
             margin-top: 12px;
-            line-height: 30px;
+            line-height: 34px;
 
             a {
-                margin-right: 12px;
+                margin-right: 16px;
             }
 
             img {
