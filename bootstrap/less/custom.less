@@ -16,6 +16,23 @@ a {
     text-decoration-skip: ink;
 }
 
+/* Grid revolutions */
+.row.eq-height {
+    display: flex;
+}
+.vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    > *:first-child {
+        margin-top: 0 !important;
+    }
+    > *:last-child {
+        margin-bottom: 0 !important;
+    }
+}
+
 /* Navbars */
 .navbar-container {
     transform: translateY(0px);
@@ -472,6 +489,7 @@ nav.navbar-default {
                 margin-right: auto;
             }
 
+            // Pictures and boxes
             div.picture {
                 margin-top: 10px;
                 margin-bottom: 10px;
@@ -565,6 +583,22 @@ nav.navbar-default {
             .wp-caption-text {
                 margin: 0.6em 0 0 0;
                 padding: 0;
+            }
+
+            /* Staff page */
+            h3.nickname {
+                font-size: 28px;
+                margin-top: 40px;
+
+                &:before {
+                    content: '“';
+                }
+                &:after {
+                    content: '”';
+                }
+            }
+            .realname {
+                font-style: italic;
             }
 
             /* Interviews */
