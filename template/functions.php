@@ -178,7 +178,7 @@ function pbi_get_section_class() {
 }
 
 /* Gets a page's permalink from its slug */
-function pbi_page_permalink_from_slug($slug) {
+function pbi_page_link_from_slug($slug) {
     $pages = get_posts(array(
         'name'        => $slug,
         'post_type'   => 'page',
@@ -193,11 +193,22 @@ function pbi_page_permalink_from_slug($slug) {
     }
 }
 
+/* Gets a page's permalink from its path */
+function pbi_page_link_from_path($path) {
+    $page = get_page_by_path($path);
+    if($page) {
+        return get_permalink($page);
+    }
+    else {
+        return '#not-found';
+    }
+}
+
 /* Gets a category's permalink from its slug */
 function pbi_category_link_from_slug($slug) {
     $term_link = get_term_link($slug, 'category');
     if(is_wp_error($term_link)) {
-        return '#';
+        return '#' . $term_link->get_error_message();
     }
     return $term_link;
 }
@@ -208,7 +219,7 @@ function pbi_is_subpage($parent_slug) {
         // Is this even a page?
         return false;
     }
-    
+
     global $post;
     if(!$post->post_parent) {
         return false;
@@ -220,7 +231,7 @@ function pbi_is_subpage($parent_slug) {
 
 function pbi_comment_renderer($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment;
-    
+
     switch($comment->comment_type){
         case '' : ?>
 
@@ -263,7 +274,7 @@ function pbi_youtube_shortcode_handler($atts, $content = null) {
         'width' => 600,
         'class' => null
     ), $atts, 'youtube');
-    
+
     if(!$a['id']) {
         return 'No ID given';
     }
