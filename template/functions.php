@@ -163,6 +163,10 @@ function pbi_get_section_class() {
         if($page_class_name) {
             return trim($page_class_name);
         }
+
+        if(pbi_is_subpage('modding')) {
+            return 'modding';
+        }
     }
 
     else if(is_category()) {
