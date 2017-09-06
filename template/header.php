@@ -80,7 +80,7 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gothic <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gothic <span class="caret hidden-xs"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="<?php echo pbi_page_link_from_path('modding/saga-di-gothic'); ?>" title="Modifiche e progetti relativi alla saga di Gothic">Modding</a></li>
 
@@ -98,7 +98,7 @@
                 </ul>
               </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elex <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elex <span class="caret hidden-xs"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="<?php echo pbi_page_link_from_slug('elex'); ?>" title="Descrizione di Elex">Il gioco</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('elex'); ?>" title="Notizie relative ad Elex">Notizie</a></li>
@@ -106,7 +106,7 @@
                 </ul>
               </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Risen <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Risen <span class="caret hidden-xs"></span></a>
                 <ul class="dropdown-menu dropdown-menu-right">
                   <li><a href="<?php echo pbi_page_link_from_path('modding/saga-di-risen'); ?>" title="Modifiche e progetti relativi alla saga di Risen">Modding</a></li>
 
@@ -142,6 +142,10 @@
                   <li><a href="<?php echo pbi_category_link_from_slug('multimedia-risen3'); ?>" title="Multimedia relativo a Risen 3">Multimedia</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('supporto-risen3'); ?>" title="Supporto per Risen 3">Supporto</a></li>
                 </ul>
+              </li>
+
+              <li class="visible-xs-block">
+                <a href="http://forum.multiplayer.it/forumdisplay.php?332-Piranha-Bytes-Italia" title="Forum su Multiplayer.it">Forum</a>
               </li>
             </ul>
           </div><!--/.navbar-collapse -->
