@@ -82,10 +82,6 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gothic <span class="caret hidden-xs"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="<?php echo pbi_page_link_from_path('modding/saga-di-gothic'); ?>" title="Modifiche e progetti relativi alla saga di Gothic">Modding</a></li>
-
-                  <li role="separator" class="divider"></li>
-
                   <li class="dropdown-header">I giochi</li>
                   <li><a href="<?php echo pbi_page_link_from_slug('gothic'); ?>" title="Descrizione di Gothic">Gothic</a></li>
                   <li><a href="<?php echo pbi_page_link_from_slug('gothic-2'); ?>" title="Descrizione di Gothic II">Gothic II</a></li>
@@ -94,6 +90,11 @@
                   <li><a href="<?php echo pbi_page_link_from_slug('gothic-3-forsaken-gods'); ?>" title="Descrizione di Gothic 3: Forsaken Gods">Gothic 3: Forsaken Gods</a></li>
 
                   <li role="separator" class="divider"></li>
+
+                  <li><a href="<?php echo pbi_page_link_from_path('modding/saga-di-gothic'); ?>" title="Modifiche e progetti relativi alla saga di Gothic">Modding</a></li>
+
+                  <li role="separator" class="divider"></li>
+
                   <li><a href="http://www.gothicitalia.it">Visita Gothic Italia!</a></li>
                 </ul>
               </li>
