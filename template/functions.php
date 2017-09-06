@@ -220,13 +220,21 @@ function pbi_is_subpage($parent_slug) {
         return false;
     }
 
+    // Seek ancestors
     global $post;
-    if(!$post->post_parent) {
-        return false;
-    }
+    $post_parent_id = $post->post_parent;
+    while($post_parent_id) {
+        $parent = get_post($post_parent_id);
+        if(!$parent) {
+            break;
+        }
+        if($parent->post_name == $parent_slug) {
+            return true;
+        }
 
-    $parent = get_post($post->post_parent);
-    return ($parent->post_name == $parent_slug);
+        $post_parent_id = $parent->post_parent;
+    }
+    return false;
 }
 
 function pbi_comment_renderer($comment, $args, $depth) {
