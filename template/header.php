@@ -109,10 +109,6 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Risen <span class="caret hidden-xs"></span></a>
                 <ul class="dropdown-menu dropdown-menu-right">
-                  <li><a href="<?php echo pbi_page_link_from_path('modding/saga-di-risen'); ?>" title="Modifiche e progetti relativi alla saga di Risen">Modding</a></li>
-
-                  <li role="separator" class="divider"></li>
-
                   <li class="dropdown-header">Risen 1</li>
                   <li><a href="<?php echo pbi_page_link_from_slug('risen'); ?>" title="Descrizione di Risen 1">Il gioco</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('risen1'); ?>" title="Notizie relative a Risen">Notizie</a></li>
@@ -142,6 +138,10 @@
                   <li><a href="<?php echo pbi_category_link_from_slug('raccolta-stampa-risen3'); ?>" title="Raccolta stampa, articoli ed interviste relative a Risen 3">Raccolta stampa</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('multimedia-risen3'); ?>" title="Multimedia relativo a Risen 3">Multimedia</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('supporto-risen3'); ?>" title="Supporto per Risen 3">Supporto</a></li>
+
+                  <li role="separator" class="divider"></li>
+
+                  <li><a href="<?php echo pbi_page_link_from_path('modding/saga-di-risen'); ?>" title="Modifiche e progetti relativi alla saga di Risen">Modding</a></li>
                 </ul>
               </li>
 
