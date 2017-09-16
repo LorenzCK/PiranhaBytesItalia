@@ -164,7 +164,10 @@ function pbi_get_section_class() {
             return trim($page_class_name);
         }
 
-        if(pbi_is_subpage('modding')) {
+        if(pbi_is_subpage('saga-di-risen')) {
+            return 'modding-risen';
+        }
+        else if(pbi_is_subpage('modding')) {
             return 'modding';
         }
     }
@@ -220,8 +223,13 @@ function pbi_is_subpage($parent_slug) {
         return false;
     }
 
-    // Seek ancestors
     global $post;
+    if($post->post_name == $parent_slug) {
+        // Plot twist: it's the page itself!
+        return true;
+    }
+
+    // Seek ancestors
     $post_parent_id = $post->post_parent;
     while($post_parent_id) {
         $parent = get_post($post_parent_id);
