@@ -62,7 +62,7 @@ function pbi_post_information_writer() {
             <b>Immagini:</b> <code>[image id=""]</code><br />
             Parametri opzionali:
                 <code>size="small|medium|large|thumbnail"</code>,
-                <code>link="true|false"</code>,
+                <code>link="true|false|URL"</code>,
                 <code>didascaly=""</code>,
                 <code>class="alignleft|aligncenter|alignright"</code>.
         </p>
@@ -71,6 +71,14 @@ function pbi_post_information_writer() {
             <b>Youtube:</b> <code>[youtube id=""]</code><br />
             Parametri opzionali:
             <code>class="alignleft|aligncenter|alignright"</code>.
+        </p>
+
+        <p>
+            <b>Link:</b> <code>[link href="slug/ID"]</code>&hellip;<code>[/link]</code><br />
+            Parametri opzionali:
+            <code>type="post|page"</code>,
+            <code>title=""</code>,
+            se usato senza tag di chiusura utilizza automaticamente il titolo del post.
         </p>
 
         <p><a href="https://docs.google.com/document/d/1WbKZUuIZZ8uA_x0S_G5-6A3RVTY1C1Vg8QSmwIL5ESE/edit?usp=sharing">Guida contenuti Piranha Bytes Italia</a> su Google Docs.</p>
