@@ -26,9 +26,9 @@
     <?php if(has_post_thumbnail()) :
       //Gets image properties from thumbnail ID, and extracts URL (first element)
       $thumbnail_attribs = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
-      ?><meta property="og:image" content="<?php echo $$thumbnail_attribs[0]; ?>" /><meta property="og:image:width" content="<?php echo $$thumbnail_attribs[1]; ?>" /><meta property="og:image:height" content="<?php echo $$thumbnail_attribs[2]; ?>" />
+      ?><meta property="og:image" content="<?php echo $thumbnail_attribs[0]; ?>" /><meta property="og:image:width" content="<?php echo $thumbnail_attribs[1]; ?>" /><meta property="og:image:height" content="<?php echo $thumbnail_attribs[2]; ?>" />
     <?php else :
-      ?><meta property="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/resources/piranha-bytes-italia-logo.jpg" /><meta property="og:image:width" content="1280" /><meta property="og:image:height" content="1280" />
+      ?><meta property="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/resources/piranha-bytes-italia-fb-cover.jpg" /><meta property="og:image:width" content="1600" /><meta property="og:image:height" content="875" />
     <?php endif; ?>
       <?php rewind_posts(); ?>
     <?php else: ?>
