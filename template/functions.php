@@ -39,6 +39,12 @@ add_action('after_setup_theme', 'pbi_setup');
 
 add_filter('show_admin_bar', '__return_false');
 
+function pbi_remove_more_link_scroll($link) {
+    $link = preg_replace('|#more-[0-9]+|', '', $link);
+    return $link;
+}
+add_filter('the_content_more_link', 'pbi_remove_more_link_scroll');
+
 function pbi_filter_get_the_terms($terms, $postId, $taxonomy) {
     // Filtering categories on category archive
     if(!is_category() || $taxonomy != 'category') {
