@@ -173,17 +173,19 @@ function pbi_get_section_class() {
     }
 
     else if(is_page()) {
-        $page_class_name = get_field('game_wrapper_class');
-        if($page_class_name) {
-            return trim($page_class_name);
-        }
+        // Walk ancestry tree manually (from current) and check for field
+        global $post;
+        $current_post = $post;
+        do {
+            // Page with explicit class name
+            $page_class_name = get_field('game_wrapper_class', $current_post->ID);
+            if($page_class_name) {
+                return trim($page_class_name);
+            }
 
-        if(pbi_is_ancestor('saga-di-risen')) {
-            return 'modding-risen';
+            $current_post = get_post($current_post->post_parent);
         }
-        else if(pbi_is_ancestor('modding')) {
-            return 'modding';
-        }
+        while($current_post);
     }
 
     else if(is_category()) {
