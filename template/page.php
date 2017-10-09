@@ -6,7 +6,7 @@ if(have_posts()) :
 ?>
 
 <h1><?php
-if(pbi_is_subpage('giochi')) {
+if(pbi_is_child('giochi')) {
     echo 'Il gioco';
 }
 else {

@@ -178,10 +178,10 @@ function pbi_get_section_class() {
             return trim($page_class_name);
         }
 
-        if(pbi_is_subpage('saga-di-risen')) {
+        if(pbi_is_ancestor('saga-di-risen')) {
             return 'modding-risen';
         }
-        else if(pbi_is_subpage('modding')) {
+        else if(pbi_is_ancestor('modding')) {
             return 'modding';
         }
     }
@@ -230,8 +230,28 @@ function pbi_category_link_from_slug($slug) {
     return $term_link;
 }
 
-/* Checks whether the current page if a subpage of another page (by slug) */
-function pbi_is_subpage($parent_slug) {
+/* Checks whether the current page is a direct child of another page (by slug) */
+function pbi_is_child($parent_slug) {
+    if(!is_page()) {
+        // Is this even a page?
+        return false;
+    }
+
+    global $post;
+    if(!$post->post_parent) {
+        return false;
+    }
+
+    $parent = get_post($post->post_parent);
+    if(!$parent) {
+        return false;
+    }
+
+    return ($parent->post_name == $parent_slug);
+}
+
+/* Checks whether the current page is an ancestor of another page (by slug) */
+function pbi_is_ancestor($parent_slug) {
     if(!is_page()) {
         // Is this even a page?
         return false;
@@ -243,7 +263,7 @@ function pbi_is_subpage($parent_slug) {
         return true;
     }
 
-    // Seek ancestors
+    // Seek full tree of ancestors
     $post_parent_id = $post->post_parent;
     while($post_parent_id) {
         $parent = get_post($post_parent_id);
