@@ -17,6 +17,7 @@ if(!function_exists('pbi_setup')){
 
         // Additional shortcodes
         add_shortcode('youtube', 'pbi_youtube_shortcode_handler');
+        add_shortcode('video', 'pbi_video_shortcode_handler');
 
         // Remove content processing
         remove_filter('the_content', 'wpautop');
@@ -75,6 +76,7 @@ function pbi_post_information_writer() {
 
         <p>
             <b>Youtube:</b> <code>[youtube id=""]</code><br />
+            <b>Video player generico:</b> <code>[video url=""]</code><br />
             Parametri opzionali:
             <code>class="alignleft|aligncenter|alignright"</code>.
         </p>
@@ -328,8 +330,8 @@ function pbi_youtube_shortcode_handler($atts, $content = null) {
     if(!$a['id']) {
         return 'No ID given';
     }
-    if(!is_int($a['width'])) {
-        return 'Non-integer width';
+    if(!is_numeric($a['width'])) {
+        return 'Non-numeric width';
     }
 
     $ret = '<div class="video-player youtube';
@@ -337,6 +339,29 @@ function pbi_youtube_shortcode_handler($atts, $content = null) {
         $ret .= ' ' . $a['class'];
     }
     $ret .= '"><div><iframe width="' . $a['width'] . '" height="' . intval($a['width'] * 0.5625) . '" src="https://www.youtube-nocookie.com/embed/' . $a['id'] . '?rel=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div></div>';
+
+    return $ret;
+}
+
+function pbi_video_shortcode_handler($atts, $content = null) {
+    $a = shortcode_atts(array(
+        'url' => '',
+        'width' => 600,
+        'class' => null
+    ), $atts, 'video');
+
+    if(!$a['url']) {
+        return 'No URL given';
+    }
+    if(!is_numeric($a['width'])) {
+        return 'Non-numeric width';
+    }
+
+    $ret = '<div class="video-player';
+    if($a['class']) {
+        $ret .= ' ' . $a['class'];
+    }
+    $ret .= '"><div><iframe width="' . $a['width'] . '" height="' . intval($a['width'] * 0.5625) . '" src="' . esc_attr($a['url']) . '" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div></div>';
 
     return $ret;
 }

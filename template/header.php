@@ -9,7 +9,7 @@
     <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700" rel="stylesheet" />
-    <link href="<?php echo get_stylesheet_directory_uri(); ?>/resources/bootstrap.min.css?ts=201709251134" rel="stylesheet" />
+    <link href="<?php echo get_stylesheet_directory_uri(); ?>/resources/bootstrap.min.css?ts=201710101433" rel="stylesheet" />
 
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/resources/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/resources/favicon-16x16.png">
@@ -115,7 +115,7 @@
                   <li><a href="<?php echo pbi_category_link_from_slug('il-contesto-risen1'); ?>" title="Il contesto di Risen 1">Il contesto</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('raccolta-stampa-risen1'); ?>" title="Raccolta stampa, articoli ed interviste relative a Risen 1">Raccolta stampa</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('multimedia-risen1'); ?>" title="Multimedia relativo a Risen 1">Multimedia</a></li>
-                  <li><a href="<?php echo pbi_category_link_from_slug('download-risen1'); ?>" title="Modding relativo a Risen 1">Download</a></li>
+                  <li><a href="<?php echo pbi_category_link_from_slug('download-risen1'); ?>" title="Download relativi a Risen 1">Download</a></li>
 
                   <li role="separator" class="divider"></li>
 
