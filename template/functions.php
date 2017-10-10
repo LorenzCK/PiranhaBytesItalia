@@ -174,18 +174,16 @@ function pbi_get_section_class() {
 
     else if(is_page()) {
         // Walk ancestry tree manually (from current) and check for field
-        global $post;
-        $current_post = $post;
         do {
+            $current_post = get_post(($current_post) ? $current_post->post_parent : null);
+
             // Page with explicit class name
             $page_class_name = get_field('game_wrapper_class', $current_post->ID);
             if($page_class_name) {
                 return trim($page_class_name);
             }
-
-            $current_post = get_post($current_post->post_parent);
         }
-        while($current_post);
+        while($current_post->post_parent);
     }
 
     else if(is_category()) {
