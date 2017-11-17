@@ -111,12 +111,12 @@ add_action('add_meta_boxes', 'pbi_register_meta_box');
 
  const CATEGORY_CLASS_MAP = array(
     'gothic-saga' => 'gothic1',
-    'gothic-2' => 'gothic2',
+    'gothic2' => 'gothic2',
     // TODO: add Notte del Corvo
-    'gothic-3' => 'gothic3',
+    'gothic3' => 'gothic3',
     'risen-saga' => 'risen1',
-    'risen-2' => 'risen2',
-    'risen-3' => 'risen3',
+    'risen2' => 'risen2',
+    'risen3' => 'risen3',
     'elex' => 'elex'
 );
 
