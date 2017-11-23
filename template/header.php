@@ -9,7 +9,7 @@
     <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700" rel="stylesheet" />
-    <link href="<?php echo get_stylesheet_directory_uri(); ?>/resources/bootstrap.min.css?ts=201710261105" rel="stylesheet" />
+    <link href="<?php echo get_stylesheet_directory_uri(); ?>/resources/bootstrap.min.css?ts=201711230100" rel="stylesheet" />
 
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/resources/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/resources/favicon-16x16.png">
@@ -107,6 +107,7 @@
                   <li><a href="<?php echo pbi_category_link_from_slug('elex'); ?>" title="Notizie relative ad Elex">Notizie</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('raccolta-stampa-elex'); ?>" title="Raccolta stampa, articoli ed interviste relative ad Elex">Raccolta Stampa</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('multimedia-elex'); ?>" title="Multimedia relativo ad Elex">Multimedia</a></li>
+                  <li><a href="<?php echo pbi_page_link_from_path('modding/elex'); ?>" title="Modding relativo ad Elex">Modding</a></li>
                 </ul>
               </li>
               <li class="dropdown">
