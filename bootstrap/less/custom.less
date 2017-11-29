@@ -476,7 +476,7 @@ nav.navbar-default {
                 margin-right: auto !important;
             }
             @media (min-width: @screen-sm-min) {
-                // On small, float elements correctly
+                // On small and larger, float elements correctly
                 .alignleft, .alignright {
                     max-width: inherit;
                     margin-left: inherit;
@@ -583,6 +583,15 @@ nav.navbar-default {
                     img {
                         width: auto;
                         max-height: 280px;
+                    }
+                }
+
+                &.image-map {
+                    width: 100%;
+                    overflow-x: scroll;
+
+                    img {
+                        max-width: unset;
                     }
                 }
             }

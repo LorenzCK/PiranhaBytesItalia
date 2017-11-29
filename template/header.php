@@ -9,7 +9,7 @@
     <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700" rel="stylesheet" />
-    <link href="<?php echo get_stylesheet_directory_uri(); ?>/resources/bootstrap.min.css?ts=201711230100" rel="stylesheet" />
+    <link href="<?php echo get_stylesheet_directory_uri(); ?>/resources/bootstrap.min.css?ts=201711292148" rel="stylesheet" />
 
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/resources/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/resources/favicon-16x16.png">
