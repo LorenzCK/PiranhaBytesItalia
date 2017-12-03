@@ -103,7 +103,7 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elex <span class="caret hidden-xs"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="<?php echo pbi_page_link_from_slug('elex'); ?>" title="Descrizione di Elex">Il gioco</a></li>
+                  <li><a href="<?php echo pbi_page_link_from_path('giochi/elex'); ?>" title="Descrizione di Elex">Il gioco</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('elex'); ?>" title="Notizie relative ad Elex">Notizie</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('raccolta-stampa-elex'); ?>" title="Raccolta stampa, articoli ed interviste relative ad Elex">Raccolta Stampa</a></li>
                   <li><a href="<?php echo pbi_category_link_from_slug('multimedia-elex'); ?>" title="Multimedia relativo ad Elex">Multimedia</a></li>
