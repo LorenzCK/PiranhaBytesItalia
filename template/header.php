@@ -94,10 +94,6 @@
                   <li role="separator" class="divider"></li>
 
                   <li><a href="<?php echo pbi_page_link_from_path('modding/saga-di-gothic'); ?>" title="Modifiche e progetti relativi alla saga di Gothic">Modding</a></li>
-
-                  <li role="separator" class="divider"></li>
-
-                  <li><a href="http://www.gothicitalia.it">Visita Gothic Italia!</a></li>
                 </ul>
               </li>
               <li class="dropdown">
