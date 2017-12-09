@@ -160,9 +160,18 @@
 
     <div class="wrapper <?php echo $section_class; ?>">
 
+    <?php
+    // Header and Christmas edition
+    $header_base_name = $section_class;
+    $current_date_arr = getdate(current_time('timestamp'));
+    if($header_base_name === 'main' && $current_date_arr['mon'] === 12 && $current_date_arr['mday'] <= 25) {
+      $header_base_name = 'main-christmas';
+    }
+    ?>
+
       <div class="section-header noselect" aria-hidden="true">
         <div class="container">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/headers/<?php echo $section_class; ?>-0.5.png" srcset="<?php echo get_stylesheet_directory_uri(); ?>/resources/headers/<?php echo $section_class; ?>-0.5.png 300w, <?php echo get_stylesheet_directory_uri(); ?>/resources/headers/<?php echo $section_class; ?>-1.0.png 600w" />
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/headers/<?php echo $header_base_name; ?>-0.5.png" srcset="<?php echo get_stylesheet_directory_uri(); ?>/resources/headers/<?php echo $header_base_name; ?>-0.5.png 300w, <?php echo get_stylesheet_directory_uri(); ?>/resources/headers/<?php echo $header_base_name; ?>-1.0.png 600w" />
         </div>
       </div>
 
