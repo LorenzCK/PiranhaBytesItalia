@@ -163,8 +163,7 @@
     <?php
     // Header and Christmas edition
     $header_base_name = $section_class;
-    $current_date_arr = getdate(current_time('timestamp'));
-    if($header_base_name === 'main' && $current_date_arr['mon'] === 12 && $current_date_arr['mday'] <= 25) {
+    if($header_base_name === 'main' && pbi_is_christmas()) {
       $header_base_name = 'main-christmas';
     }
     ?>
