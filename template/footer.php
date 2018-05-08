@@ -58,7 +58,7 @@
             <div class="col-xs-12 col-sm-12 copyright">
                 <p>&copy;&nbsp;Piranha Bytes Italia <?php echo date('Y'); ?>.</p>
 
-                <p>Tutti i contenuti relativi a Gothic®, Risen® ed Elex® sono marchi registrati e di proprietà di Pluto 13 GmbH &copy;&nbsp;1997&ndash;2017.</p>
+                <p>Tutti i contenuti relativi a Gothic®, Risen® ed Elex® sono marchi registrati e di proprietà di Pluto 13 GmbH &copy;&nbsp;1997&ndash;<?php echo date('Y'); ?>.</p>
 
                 <p>Il contenuto di questo fansite è di proprietà dei curatori del sito, e qualsiasi utilizzo del materiale, anche parziale, deve essere prima autorizzato dallo staff. Tutti i diritti riservati. Per ulteriori informazioni contattate l'amministratore del sito.
                 Tutti gli altri marchi e/o marchi registrati sono di proprietà dei legittimi detentori.</p>
