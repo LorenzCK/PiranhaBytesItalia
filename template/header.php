@@ -9,7 +9,7 @@
     <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700" rel="stylesheet" />
-    <link href="<?php echo get_stylesheet_directory_uri(); ?>/resources/bootstrap.min.css?ts=201712182319" rel="stylesheet" />
+    <link href="<?php echo get_stylesheet_directory_uri(); ?>/resources/bootstrap.min.css?ts=201805081613" rel="stylesheet" />
 
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/resources/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/resources/favicon-16x16.png">
@@ -73,7 +73,6 @@
           <div class="social-bar">
             <a href="https://www.facebook.com/groups/staffrisenitalia/" title="Iscriviti al gruppo Piranha Bytes Italia su Facebook"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-facebook-black.png" alt="Facebook icon" /></a>
             <a href="https://www.youtube.com/user/GothicRisenItalia" title="Segui Piranha Bytes Italia su Youtube"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-youtube-black.png" alt="Youtube icon" /></a>
-            <a href="https://plus.google.com/+GothicRisenItalia" title="Segui Piranha Bytes Italia su Google+"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-googleplus-black.png" alt="Google Plus icon" /></a>
             <a href="https://feedburner.google.com/fb/a/mailverify?uri=PiranhaBytesItalia&amp;loc=it_IT" title="Ricevi le notizie di Piranha Bytes Italia tramite e-mail"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-subscribe-black.png" alt="Sottoscrizione e-mail" /></a>
           </div>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
