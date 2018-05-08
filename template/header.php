@@ -17,6 +17,8 @@
 
     <?php wp_head(); ?>
 
+    <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/PiranhaBytesItalia" />
+
     <?php if(is_singular() && have_posts()) : ?>
       <?php the_post(); ?>
     <!-- Facebook open graph -->
@@ -54,7 +56,8 @@
             <li><a href="https://www.youtube.com/user/GothicRisenItalia" title="Segui Piranha Bytes Italia su Youtube"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-youtube-white.png" alt="Youtube icon" /></a></li>
             <li><a href="https://www.twitch.tv/piranhabytesitalia" title="Segui Piranha Bytes Italia su Twitch"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-twitch-white.png" alt="Twitch icon" /></a></li>
             <li><a href="https://plus.google.com/+GothicRisenItalia" title="Segui Piranha Bytes Italia su Google+"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-googleplus-white.png" alt="Google Plus icon" /></a></li>
-            <li><a href="<?php bloginfo('rss2_url'); ?>" title="Segui il Feed RSS di Piranha Bytes Italia"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-rss-white.png" alt="RSS 2.0 Feed icon" /></a></li>
+            <li><a href="http://feeds.feedburner.com/PiranhaBytesItalia" title="Segui il Feed RSS di Piranha Bytes Italia"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-rss-white.png" alt="RSS 2.0 Feed icon" /></a></li>
+            <li><a href="https://feedburner.google.com/fb/a/mailverify?uri=PiranhaBytesItalia&amp;loc=it_IT" title="Ricevi le notizie di Piranha Bytes Italia tramite e-mail"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-subscribe-white.png" alt="Sottoscrizione e-mail" /></a></li>
           </ul>
         </div>
       </nav>
@@ -70,8 +73,8 @@
           <div class="social-bar">
             <a href="https://www.facebook.com/groups/staffrisenitalia/" title="Iscriviti al gruppo Piranha Bytes Italia su Facebook"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-facebook-black.png" alt="Facebook icon" /></a>
             <a href="https://www.youtube.com/user/GothicRisenItalia" title="Segui Piranha Bytes Italia su Youtube"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-youtube-black.png" alt="Youtube icon" /></a>
-            <a href="https://www.twitch.tv/piranhabytesitalia" title="Segui Piranha Bytes Italia su Twitch"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-twitch-black.png" alt="Twitch icon" /></a>
             <a href="https://plus.google.com/+GothicRisenItalia" title="Segui Piranha Bytes Italia su Google+"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-googleplus-black.png" alt="Google Plus icon" /></a>
+            <a href="https://feedburner.google.com/fb/a/mailverify?uri=PiranhaBytesItalia&amp;loc=it_IT" title="Ricevi le notizie di Piranha Bytes Italia tramite e-mail"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-subscribe-black.png" alt="Sottoscrizione e-mail" /></a>
           </div>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Espandi menù di navigazione</span>

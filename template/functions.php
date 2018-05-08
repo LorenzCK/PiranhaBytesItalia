@@ -10,7 +10,6 @@ if(!function_exists('pbi_setup')){
     function pbi_setup() {
         // Theme support
         add_theme_support('post-thumbnails');
-        add_theme_support('automatic-feed-links');
 
         // Additional image sizes
         add_image_size('large-retina', 1280, 1280, false);
