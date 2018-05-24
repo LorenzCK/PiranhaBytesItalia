@@ -6,26 +6,9 @@
       </div>
 
       <footer>
-        <div class="container-fluid characters hidden-xs">
-          <div class="row">
-            <div class="col-sm-6 fred">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/fred-0.3.png" alt="Fred" srcset="<?php echo get_stylesheet_directory_uri(); ?>/resources/fred-0.3.png 180w, <?php echo get_stylesheet_directory_uri(); ?>/resources/fred-0.6.png 359w, <?php echo get_stylesheet_directory_uri(); ?>/resources/fred-1.0.png 599w" />
-              <a href="<?php echo pbi_page_link_from_slug('partner-websites'); ?>" title="Web partner" class="web-partner"></a>
-              <a href="<?php echo pbi_page_link_from_slug('staff'); ?>" title="Staff e contatti" class="staff"></a>
-              <a href="http://forum.multiplayer.it/forumdisplay.php?332-Piranha-Bytes-Italia" title="Forum su Multiplayer.it" class="forum"></a>
-            </div>
-
-            <div class="col-sm-6 jaffar">
-              <a href="<?php echo pbi_page_link_from_slug('donazione'); ?>" title="Donazioni">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/jaffar-0.3.png" alt="Jaffar" srcset="<?php echo get_stylesheet_directory_uri(); ?>/resources/jaffar-0.3.png 112w, <?php echo get_stylesheet_directory_uri(); ?>/resources/jaffar-0.6.png 224w, <?php echo get_stylesheet_directory_uri(); ?>/resources/jaffar-1.0.png 374w" />
-              </a>
-            </div>
-          </div>
-        </div>
-
         <div class="container">
           <div class="row">
-            <div class="col-xs-12 visible-xs-block social-links">
+            <div class="col-xs-12 col-sm-8 social-links">
               <a href="https://www.facebook.com/groups/staffrisenitalia/" title="Iscriviti al gruppo Piranha Bytes Italia su Facebook"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-facebook-black.png" alt="Facebook icon" /></a>
               <a href="https://www.youtube.com/user/GothicRisenItalia" title="Segui Piranha Bytes Italia su Youtube"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-youtube-black.png" alt="Youtube icon" /></a>
               <a href="https://plus.google.com/+GothicRisenItalia" title="Segui Piranha Bytes Italia su Google+"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-googleplus-black.png" alt="Google Plus icon" /></a>
@@ -35,18 +18,19 @@
           </div>
 
           <div class="row">
-            <div class="col-xs-6 visible-xs-block access-links">
+            <div class="col-xs-6 col-sm-4 access-links">
               <ul>
                 <li class="header">Navigazione</li>
                 <li><a href="<?php echo get_home_url(); ?>" title="Piranha Bytes Italia homepage e notizie">Homepage</a></li>
                 <li><a href="<?php echo pbi_page_link_from_slug('staff'); ?>" title="Staff e contatti">Staff e contatti</a></li>
                 <li><a href="<?php echo pbi_page_link_from_slug('partner-websites'); ?>" title="Web partner">Web partner</a></li>
-                <li><a href="<?php echo pbi_page_link_from_slug('donazione'); ?>" title="Donazioni">Donazioni</a></li>
+                <li class="visible-xs-block"><a href="<?php echo pbi_page_link_from_slug('donazione'); ?>" title="Donazioni">Donazioni</a></li>
+                <li><a href="<?php echo pbi_page_link_from_slug('privacy'); ?>" title="Donazioni">Informativa sulla privacy</a></li>
                 <li><a href="http://forum.multiplayer.it/forumdisplay.php?332-Piranha-Bytes-Italia" title="Forum su Multiplayer.it">Forum</a></li>
               </ul>
             </div>
 
-            <div class="col-xs-6 visible-xs-block access-links">
+            <div class="col-xs-6 col-sm-4 access-links">
               <ul>
                 <li class="header">Le Saghe</li>
                 <li><a href="<?php echo get_term_link('gothic-saga', 'category'); ?>" title="Notizie relative alla saga di Gothic">Gothic Saga</a></li>
@@ -55,7 +39,13 @@
               </ul>
             </div>
 
-            <div class="col-xs-12 col-sm-12 copyright">
+            <div class="col-sm-4 hidden-xs jaffar">
+              <a href="<?php echo pbi_page_link_from_slug('donazione'); ?>" title="Donazioni">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/jaffar-0.3.png" alt="Jaffar" srcset="<?php echo get_stylesheet_directory_uri(); ?>/resources/jaffar-0.3.png 112w, <?php echo get_stylesheet_directory_uri(); ?>/resources/jaffar-0.6.png 224w, <?php echo get_stylesheet_directory_uri(); ?>/resources/jaffar-1.0.png 374w" />
+              </a>
+            </div>
+
+            <div class="col-xs-12 copyright">
                 <p>&copy;&nbsp;Piranha Bytes Italia <?php echo date('Y'); ?>.</p>
 
                 <p>Tutti i contenuti relativi a Gothic®, Risen® ed Elex® sono marchi registrati e di proprietà di Pluto 13 GmbH &copy;&nbsp;1997&ndash;<?php echo date('Y'); ?>.</p>

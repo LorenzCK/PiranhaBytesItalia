@@ -813,62 +813,24 @@ footer {
     padding-top: 2em;
     padding-bottom: 2em;
     margin-top: 5em;
-    @media (min-width: @screen-sm-min) {
-        margin-top: -40px;
-    }
     z-index: 900;
 
-    box-shadow: 0 -10px 20px rgba(0, 64, 61, 0.4);
     background-color: @brand-primary;
     color: rgb(0, 96, 91);
-    @media (min-width: @screen-sm-min) {
-        box-shadow: unset;
-        background: linear-gradient(180deg, transparent, black 50%);
-        color: white;
-    }
 
-    .characters {
-        max-height: 400px;
+    .jaffar {
+        position: relative;
+        max-height: 200px;
 
-        div {
-            padding: 0;
-        }
-
-        .fred, .jaffar {
-            img {
-                max-width: 100%;
-                width: auto;
-                max-height: 400px;
-            }
-        }
-        .fred {
+        a {
             position: relative;
-
-            a {
-                display: block;
-                position: absolute;
-            }
-            a.web-partner {
-                top: 35px;
-                left: 20px;
-                width: 135px;
-                height: 95px;
-            }
-            a.staff {
-                top: 5px;
-                left: 155px;
-                width: 135px;
-                height: 75px;
-            }
-            a.forum {
-                top: 80px;
-                left: 230px;
-                width: 170px;
-                height: 80px;
-            }
+            top: -200px;
         }
-        .jaffar {
-            text-align: right;
+
+        img {
+            max-width: 100%;
+            width: auto;
+            max-height: 400px;
         }
     }
 
