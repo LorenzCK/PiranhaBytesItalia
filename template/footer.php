@@ -42,6 +42,7 @@
                 <li><a href="<?php echo pbi_page_link_from_slug('staff'); ?>" title="Staff e contatti">Staff e contatti</a></li>
                 <li><a href="<?php echo pbi_page_link_from_slug('partner-websites'); ?>" title="Web partner">Web partner</a></li>
                 <li><a href="<?php echo pbi_page_link_from_slug('donazione'); ?>" title="Donazioni">Donazioni</a></li>
+                <li><a href="<?php echo pbi_page_link_from_slug('privacy'); ?>" title="Donazioni">Informativa sulla privacy</a></li>
                 <li><a href="http://forum.multiplayer.it/forumdisplay.php?332-Piranha-Bytes-Italia" title="Forum su Multiplayer.it">Forum</a></li>
               </ul>
             </div>
