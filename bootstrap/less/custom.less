@@ -85,8 +85,14 @@ a {
         margin-left: 20px;
 
         &.extra-space {
-            @media (min-width: @screen-md-min) {
+            @media (min-width: @screen-sm-min) {
                 margin-left: 40px;
+            }
+            @media (min-width: @screen-md-min) {
+                margin-left: 60px;
+            }
+            @media (min-width: @screen-lg-min) {
+                margin-left: 100px;
             }
         }
 
