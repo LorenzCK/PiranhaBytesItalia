@@ -369,7 +369,7 @@ function pbi_is_christmas() {
     $current_date_arr = getdate(current_time('timestamp'));
 
     return (
-        ($current_date_arr['mon'] === 12) ||
-        ($current_date_arr['mon'] === 1 && $current_date_arr['mday'] <= 7)
+        ($current_date_arr['mon'] === 12 && $current_date_arr['mday'] <= 8) ||
+        ($current_date_arr['mon'] === 1 && $current_date_arr['mday'] <= 6)
     );
 }
