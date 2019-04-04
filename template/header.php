@@ -55,7 +55,6 @@
             <li class="extra-space"><a href="https://www.facebook.com/groups/staffrisenitalia/" title="Iscriviti al gruppo Piranha Bytes Italia su Facebook"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-facebook-white.png" alt="Facebook icon" /></a></li>
             <li><a href="https://www.youtube.com/user/GothicRisenItalia" title="Segui Piranha Bytes Italia su Youtube"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-youtube-white.png" alt="Youtube icon" /></a></li>
             <li><a href="https://www.twitch.tv/piranhabytesitalia" title="Segui Piranha Bytes Italia su Twitch"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-twitch-white.png" alt="Twitch icon" /></a></li>
-            <li><a href="https://plus.google.com/+GothicRisenItalia" title="Segui Piranha Bytes Italia su Google+"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-googleplus-white.png" alt="Google Plus icon" /></a></li>
             <li><a href="http://feeds.feedburner.com/PiranhaBytesItalia" title="Segui il Feed RSS di Piranha Bytes Italia"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-rss-white.png" alt="RSS 2.0 Feed icon" /></a></li>
             <li><a href="https://feedburner.google.com/fb/a/mailverify?uri=PiranhaBytesItalia&amp;loc=it_IT" title="Ricevi le notizie di Piranha Bytes Italia tramite e-mail"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/icon-subscribe-white.png" alt="Sottoscrizione e-mail" /></a></li>
           </ul>
