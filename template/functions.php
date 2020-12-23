@@ -282,9 +282,7 @@ function pbi_is_ancestor($parent_slug) {
 
 function pbi_comment_renderer($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment;
-
-    switch($comment->comment_type){
-        case '' : ?>
+?>
 
 <div <?php comment_class('row'); ?> id="comment-<?php comment_ID(); ?>">
     <div class="comment-avatar col-xs-3 col-sm-2">
@@ -310,11 +308,11 @@ function pbi_comment_renderer($comment, $args, $depth) {
         <div class="comment-body">
             <?php comment_text(); ?>
         </div>
-    </div>
+    </div><!-- .comment-content -->
 
-            <?php
-            break;
-    }
+    <!-- Closing div provided by WordPress -->
+
+<?php
 }
 
 /* SHORTCODES */

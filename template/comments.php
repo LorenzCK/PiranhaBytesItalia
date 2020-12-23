@@ -6,7 +6,16 @@
     <h2 id="comments">Commenti</h2>
 
     <div class="comment-list">
-        <?php wp_list_comments(array('callback' => 'pbi_comment_renderer', 'style' => 'div' )); ?>
+        <?php
+        wp_list_comments(
+            array(
+                'callback' => 'pbi_comment_renderer',
+                'style' => 'div',
+                'type' => 'comment',
+                'echo' => true
+            )
+        );
+        ?>
     </div>
 
 <?php } ?>
